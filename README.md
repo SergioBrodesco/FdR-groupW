@@ -5,7 +5,7 @@ This repository contains all the sources created by the group W during the cours
 Open [**Project-1_Robot-Robotic_Manipulator.pdf**](https://github.com/SergioBrodesco/FdR-groupW/blob/master/Project-1_Robot-Robotic_Manipulator.pdf) to have more details about the project.
 <br><br>
 
-https://github.com/SergioBrodesco/FdR-groupW/blob/master/media/Arm_alone.jpg
+![Alt text](https://github.com/SergioBrodesco/FdR-groupW/blob/master/media/Arm_alone.jpg)
 
 # How to use
 <br>
