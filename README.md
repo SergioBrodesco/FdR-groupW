@@ -39,6 +39,7 @@ The repo consist of a ROS 1 package that needs to be integrated with the Locosim
 <br>
 
 **NOTE:** You should change LOCOSIM_DIR with the path to your locosim directory.
+<br>
 We also assume that your /ros_ws folder is located in your home folder.
 
 ```
