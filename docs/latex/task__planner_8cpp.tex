@@ -1,0 +1,135 @@
+\hypertarget{task__planner_8cpp}{}\doxysection{/home/sergio/ros\+\_\+ws/src/locosim/robot\+\_\+control/lab\+\_\+exercises/lab\+\_\+group\+\_\+w/src/task\+\_\+planner.cpp File Reference}
+\label{task__planner_8cpp}\index{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/lab\_group\_w/src/task\_planner.cpp@{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/lab\_group\_w/src/task\_planner.cpp}}
+
+
+Implementation of the R\+OS node task\+\_\+planner, that we use to send destinations to the motion node.  
+
+
+{\ttfamily \#include \char`\"{}../include/task\+\_\+planner.\+h\char`\"{}}\newline
+Include dependency graph for task\+\_\+planner.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{task__planner_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{task__planner_8cpp_ad139484c48163b0467ecabcd07da6891}{callback\+\_\+sub}} (const lab\+\_\+group\+\_\+w\+::\+Image\+Data \&msg)
+\begin{DoxyCompactList}\small\item\em Callback function used to store the informations of the detected object obtained from the /image\+Processor/processed\+\_\+data custom topic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{task__planner_8cpp_a64e5b20366c3c41e3a7144d75f3d8ee3}{choose\+\_\+destination}} ()
+\begin{DoxyCompactList}\small\item\em Function that decides where to put the blocks (calling \mbox{\hyperlink{task__planner_8h_aaf591b655d921bc117810edea2991812}{set\+\_\+positions()}}) depending on its class (saved inside instructions.\+class\+\_\+type) received from the image detection node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{task__planner_8cpp_aaf591b655d921bc117810edea2991812}{set\+\_\+positions}} (double p0, double p1, double p2)
+\begin{DoxyCompactList}\small\item\em Set the positions in the \char`\"{}\+Robot\+Instructions\char`\"{} message using the information we received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{task__planner_8cpp_ad0bbc65543990144b4987c3ae1bf0434}{set\+\_\+rotations}} (double r0\+\_\+0, double r0\+\_\+1, double r0\+\_\+2, double r1\+\_\+0, double r1\+\_\+1, double r1\+\_\+2, double r2\+\_\+0, double r2\+\_\+1, double r2\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Set the rotations in the \char`\"{}\+Robot\+Instructions\char`\"{} message using the information we received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{task__planner_8cpp_ac2d0900f7d77e782d08bae6496d79278}{set\+\_\+diameter}} (int class\+\_\+type, bool soft\+\_\+gripper)
+\begin{DoxyCompactList}\small\item\em Set the gripper diameter in the \char`\"{}\+Robot\+Instructions\char`\"{} message that we send to the motion node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__planner_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{task__planner_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the R\+OS node task\+\_\+planner, that we use to send destinations to the motion node. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{task__planner_8cpp_ad139484c48163b0467ecabcd07da6891}\label{task__planner_8cpp_ad139484c48163b0467ecabcd07da6891}} 
+\index{task\_planner.cpp@{task\_planner.cpp}!callback\_sub@{callback\_sub}}
+\index{callback\_sub@{callback\_sub}!task\_planner.cpp@{task\_planner.cpp}}
+\doxysubsubsection{\texorpdfstring{callback\_sub()}{callback\_sub()}}
+{\footnotesize\ttfamily void callback\+\_\+sub (\begin{DoxyParamCaption}\item[{const lab\+\_\+group\+\_\+w\+::\+Image\+Data \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Callback function used to store the informations of the detected object obtained from the /image\+Processor/processed\+\_\+data custom topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Image\+Data message received from the vision node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{task__planner_8cpp_a64e5b20366c3c41e3a7144d75f3d8ee3}\label{task__planner_8cpp_a64e5b20366c3c41e3a7144d75f3d8ee3}} 
+\index{task\_planner.cpp@{task\_planner.cpp}!choose\_destination@{choose\_destination}}
+\index{choose\_destination@{choose\_destination}!task\_planner.cpp@{task\_planner.cpp}}
+\doxysubsubsection{\texorpdfstring{choose\_destination()}{choose\_destination()}}
+{\footnotesize\ttfamily void choose\+\_\+destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that decides where to put the blocks (calling \mbox{\hyperlink{task__planner_8h_aaf591b655d921bc117810edea2991812}{set\+\_\+positions()}}) depending on its class (saved inside instructions.\+class\+\_\+type) received from the image detection node. 
+
+\mbox{\Hypertarget{task__planner_8cpp_ac2d0900f7d77e782d08bae6496d79278}\label{task__planner_8cpp_ac2d0900f7d77e782d08bae6496d79278}} 
+\index{task\_planner.cpp@{task\_planner.cpp}!set\_diameter@{set\_diameter}}
+\index{set\_diameter@{set\_diameter}!task\_planner.cpp@{task\_planner.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_diameter()}{set\_diameter()}}
+{\footnotesize\ttfamily void set\+\_\+diameter (\begin{DoxyParamCaption}\item[{int}]{class\+\_\+type,  }\item[{bool}]{soft\+\_\+gripper }\end{DoxyParamCaption})}
+
+
+
+Set the gripper diameter in the \char`\"{}\+Robot\+Instructions\char`\"{} message that we send to the motion node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+\_\+type} & class type of the detected object \\
+\hline
+{\em soft\+\_\+gripper} & variable used to differentiate between soft and rigid gripper \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{task__planner_8cpp_aaf591b655d921bc117810edea2991812}\label{task__planner_8cpp_aaf591b655d921bc117810edea2991812}} 
+\index{task\_planner.cpp@{task\_planner.cpp}!set\_positions@{set\_positions}}
+\index{set\_positions@{set\_positions}!task\_planner.cpp@{task\_planner.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_positions()}{set\_positions()}}
+{\footnotesize\ttfamily void set\+\_\+positions (\begin{DoxyParamCaption}\item[{double}]{p0,  }\item[{double}]{p1,  }\item[{double}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Set the positions in the \char`\"{}\+Robot\+Instructions\char`\"{} message using the information we received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) 
+
+Set the positions in the \char`\"{}\+Robot\+Instructions\char`\"{} message we\textquotesingle{}ll send to the motion node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p0} & X \\
+\hline
+{\em p1} & Y \\
+\hline
+{\em p2} & Z \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{task__planner_8cpp_ad0bbc65543990144b4987c3ae1bf0434}\label{task__planner_8cpp_ad0bbc65543990144b4987c3ae1bf0434}} 
+\index{task\_planner.cpp@{task\_planner.cpp}!set\_rotations@{set\_rotations}}
+\index{set\_rotations@{set\_rotations}!task\_planner.cpp@{task\_planner.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_rotations()}{set\_rotations()}}
+{\footnotesize\ttfamily void set\+\_\+rotations (\begin{DoxyParamCaption}\item[{double}]{r0\+\_\+0,  }\item[{double}]{r0\+\_\+1,  }\item[{double}]{r0\+\_\+2,  }\item[{double}]{r1\+\_\+0,  }\item[{double}]{r1\+\_\+1,  }\item[{double}]{r1\+\_\+2,  }\item[{double}]{r2\+\_\+0,  }\item[{double}]{r2\+\_\+1,  }\item[{double}]{r2\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Set the rotations in the \char`\"{}\+Robot\+Instructions\char`\"{} message using the information we received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) 
+
+Set the rotations in the \char`\"{}\+Robot\+Instructions\char`\"{} message we\textquotesingle{}ll send to the motion node (saved as a Rotation matrix)
+
+
+\begin{DoxyParams}{Parameters}
+{\em r0\+\_\+0} & \\
+\hline
+{\em r0\+\_\+1} & \\
+\hline
+{\em r0\+\_\+2} & \\
+\hline
+{\em r1\+\_\+0} & \\
+\hline
+{\em r1\+\_\+1} & \\
+\hline
+{\em r1\+\_\+2} & \\
+\hline
+{\em r2\+\_\+0} & \\
+\hline
+{\em r2\+\_\+1} & \\
+\hline
+{\em r2\+\_\+2} & \\
+\hline
+\end{DoxyParams}

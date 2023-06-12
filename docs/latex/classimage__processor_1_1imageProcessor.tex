@@ -1,0 +1,178 @@
+\hypertarget{classimage__processor_1_1imageProcessor}{}\doxysection{image\+\_\+processor.\+image\+Processor Class Reference}
+\label{classimage__processor_1_1imageProcessor}\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classimage__processor_1_1imageProcessor_ab62989f5f18040ed0a67a6eff4b193e8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classimage__processor_1_1imageProcessor_a06d6f7f34f90af33339f94922d144858}{receive\+\_\+pointcloud}} (self, msg)
+\item 
+def \mbox{\hyperlink{classimage__processor_1_1imageProcessor_a4b668a738ad9d3121f1ae835ace41e0f}{receive\+\_\+image\+\_\+L}} (self, msg)
+\item 
+def \mbox{\hyperlink{classimage__processor_1_1imageProcessor_ad80e6d5f55831afe8e56991513bb1149}{get\+\_\+point\+Cloud\+\_\+region}} (self, x1, y1, x2, y2)
+\item 
+def \mbox{\hyperlink{classimage__processor_1_1imageProcessor_a587f9ba0bc282a4bc2409bebede18b1a}{object\+\_\+detection}} (self, path\+\_\+to\+\_\+model, path\+\_\+to\+\_\+weights)
+\item 
+def \mbox{\hyperlink{classimage__processor_1_1imageProcessor_a2efd541b8a8beadea18f03234616ad35}{show\+\_\+detections}} (self)
+\item 
+def \mbox{\hyperlink{classimage__processor_1_1imageProcessor_a647adf51154d9bcc2878e7ab59755c45}{pose\+\_\+estimation}} (self, models\+\_\+dir)
+\item 
+def \mbox{\hyperlink{classimage__processor_1_1imageProcessor_af6aed1c8f761e8bd8bbb16871b790415}{show\+\_\+objects\+\_\+poses}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a6bf1c35dc7d7275c70e6e7342e43d181}\label{classimage__processor_1_1imageProcessor_a6bf1c35dc7d7275c70e6e7342e43d181}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_a6bf1c35dc7d7275c70e6e7342e43d181}{img\+\_\+L}}
+\begin{DoxyCompactList}\small\item\em image captured from the camera left eye \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_ad640ddd80c6dc4e39203d4c3ecb328d8}\label{classimage__processor_1_1imageProcessor_ad640ddd80c6dc4e39203d4c3ecb328d8}} 
+{\bfseries point\+\_\+cloud}
+\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a508e39eb831459b3e114df571f94db0f}\label{classimage__processor_1_1imageProcessor_a508e39eb831459b3e114df571f94db0f}} 
+{\bfseries classes}
+\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_aaaf567d0250368ee2c8ed9a4ce78f3f2}\label{classimage__processor_1_1imageProcessor_aaaf567d0250368ee2c8ed9a4ce78f3f2}} 
+{\bfseries boxes}
+\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_ad8e0cdd7b7d94d6162cf604b08e2769a}\label{classimage__processor_1_1imageProcessor_ad8e0cdd7b7d94d6162cf604b08e2769a}} 
+{\bfseries confidences}
+\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a498be7ee7abbbb2bb13e68029f4ccf86}\label{classimage__processor_1_1imageProcessor_a498be7ee7abbbb2bb13e68029f4ccf86}} 
+{\bfseries class\+\_\+ids}
+\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_ad861d1c32e814774c560c7a627ec90d8}\label{classimage__processor_1_1imageProcessor_ad861d1c32e814774c560c7a627ec90d8}} 
+{\bfseries number\+\_\+of\+\_\+detections}
+\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a818a23d0055ec2db3ffcc9b68f7915cb}\label{classimage__processor_1_1imageProcessor_a818a23d0055ec2db3ffcc9b68f7915cb}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_a818a23d0055ec2db3ffcc9b68f7915cb}{objects\+\_\+relative\+\_\+points}}
+\begin{DoxyCompactList}\small\item\em Object points respect to object\textquotesingle{}s center. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a819a40f7cc91934df7c111220aa15b49}\label{classimage__processor_1_1imageProcessor_a819a40f7cc91934df7c111220aa15b49}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_a819a40f7cc91934df7c111220aa15b49}{objects\+\_\+relative\+\_\+pixels}}
+\begin{DoxyCompactList}\small\item\em Object points relative to pixel coordinate system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_ac0d65d1ec33b42b006c23d1940ef73eb}\label{classimage__processor_1_1imageProcessor_ac0d65d1ec33b42b006c23d1940ef73eb}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_ac0d65d1ec33b42b006c23d1940ef73eb}{objects\+\_\+rotations}}
+\begin{DoxyCompactList}\small\item\em list of rotation matrices from World to Object coordinates \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_aa4f0540fd2f430b6e936ba6a99de9f8f}\label{classimage__processor_1_1imageProcessor_aa4f0540fd2f430b6e936ba6a99de9f8f}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_aa4f0540fd2f430b6e936ba6a99de9f8f}{objects\+\_\+positions}}
+\begin{DoxyCompactList}\small\item\em list of traslation vectors from World to Object coordinates \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a5318b348e5df9981c0060939bed988ee}\label{classimage__processor_1_1imageProcessor_a5318b348e5df9981c0060939bed988ee}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_a5318b348e5df9981c0060939bed988ee}{w\+\_\+\+R\+\_\+c}}
+\begin{DoxyCompactList}\small\item\em Rotation matrix from Camera to World frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_aa0da1a14de5a6f9b33cd64bf74d734ec}\label{classimage__processor_1_1imageProcessor_aa0da1a14de5a6f9b33cd64bf74d734ec}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_aa0da1a14de5a6f9b33cd64bf74d734ec}{x\+\_\+c}}
+\begin{DoxyCompactList}\small\item\em Traslation vector from Robot to Camera frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_abc06e05291ccbbec604d8c8e428b986a}\label{classimage__processor_1_1imageProcessor_abc06e05291ccbbec604d8c8e428b986a}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_abc06e05291ccbbec604d8c8e428b986a}{base\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em Translation vector from World to Robot base frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_ad5770dc56b57e9533c1752166e7232f7}\label{classimage__processor_1_1imageProcessor_ad5770dc56b57e9533c1752166e7232f7}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_ad5770dc56b57e9533c1752166e7232f7}{camera\+Matrix}}
+\begin{DoxyCompactList}\small\item\em intrisic parameters of the camera \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a2e20148a40ed7785995e65387ee6d967}\label{classimage__processor_1_1imageProcessor_a2e20148a40ed7785995e65387ee6d967}} 
+\mbox{\hyperlink{classimage__processor_1_1imageProcessor_a2e20148a40ed7785995e65387ee6d967}{dist\+Coeffs}}
+\begin{DoxyCompactList}\small\item\em intrinsic distortion coefficients of the camera \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class to detect and classify objects using YOLO5.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_ab62989f5f18040ed0a67a6eff4b193e8}\label{classimage__processor_1_1imageProcessor_ab62989f5f18040ed0a67a6eff4b193e8}} 
+\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def image\+\_\+processor.\+image\+Processor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the ImageProcessor.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__processor_1_1imageProcessor_ad80e6d5f55831afe8e56991513bb1149}\label{classimage__processor_1_1imageProcessor_ad80e6d5f55831afe8e56991513bb1149}} 
+\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}!get\_pointCloud\_region@{get\_pointCloud\_region}}
+\index{get\_pointCloud\_region@{get\_pointCloud\_region}!image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsubsection{\texorpdfstring{get\_pointCloud\_region()}{get\_pointCloud\_region()}}
+{\footnotesize\ttfamily def image\+\_\+processor.\+image\+Processor.\+get\+\_\+point\+Cloud\+\_\+region (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x1,  }\item[{}]{y1,  }\item[{}]{x2,  }\item[{}]{y2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve the point cloud region.
+
+Args:
+    x1 (int): x-coordinate of the top-left corner.
+    y1 (int): y-coordinate of the top-left corner.
+    x2 (int): x-coordinate of the bottom-right corner.
+    y2 (int): y-coordinate of the bottom-right corner.
+
+Returns:
+    tuple: points regarding the specified region in camera coordinates, same points in pixel coordinates.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a587f9ba0bc282a4bc2409bebede18b1a}\label{classimage__processor_1_1imageProcessor_a587f9ba0bc282a4bc2409bebede18b1a}} 
+\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}!object\_detection@{object\_detection}}
+\index{object\_detection@{object\_detection}!image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsubsection{\texorpdfstring{object\_detection()}{object\_detection()}}
+{\footnotesize\ttfamily def image\+\_\+processor.\+image\+Processor.\+object\+\_\+detection (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path\+\_\+to\+\_\+model,  }\item[{}]{path\+\_\+to\+\_\+weights }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Detect objects in the image and store the results in class variables:
+
+boxes : bounding boxes of the objects.
+confidences : confidence score of each detection.
+class_ids : classes associated yolo indexes.
+classes : class names in string format.
+number_of_detections : number of detected objects.
+
+Args:
+    path_to_model (string): absolute path to the Yolov5 model.
+    path_to_weights (string) : absolute path to the weights file.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a647adf51154d9bcc2878e7ab59755c45}\label{classimage__processor_1_1imageProcessor_a647adf51154d9bcc2878e7ab59755c45}} 
+\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}!pose\_estimation@{pose\_estimation}}
+\index{pose\_estimation@{pose\_estimation}!image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsubsection{\texorpdfstring{pose\_estimation()}{pose\_estimation()}}
+{\footnotesize\ttfamily def image\+\_\+processor.\+image\+Processor.\+pose\+\_\+estimation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{models\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Instantiate a PoseEstimater object for each detection and run pose estimation on it
+
+Args:
+    models_dir (string) : Absolute path to .stl mesh folder
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a4b668a738ad9d3121f1ae835ace41e0f}\label{classimage__processor_1_1imageProcessor_a4b668a738ad9d3121f1ae835ace41e0f}} 
+\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}!receive\_image\_L@{receive\_image\_L}}
+\index{receive\_image\_L@{receive\_image\_L}!image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsubsection{\texorpdfstring{receive\_image\_L()}{receive\_image\_L()}}
+{\footnotesize\ttfamily def image\+\_\+processor.\+image\+Processor.\+receive\+\_\+image\+\_\+L (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Receive the left camera image.
+
+Args:
+    msg (Image): Image message.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a06d6f7f34f90af33339f94922d144858}\label{classimage__processor_1_1imageProcessor_a06d6f7f34f90af33339f94922d144858}} 
+\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}!receive\_pointcloud@{receive\_pointcloud}}
+\index{receive\_pointcloud@{receive\_pointcloud}!image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsubsection{\texorpdfstring{receive\_pointcloud()}{receive\_pointcloud()}}
+{\footnotesize\ttfamily def image\+\_\+processor.\+image\+Processor.\+receive\+\_\+pointcloud (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Receive and store the point cloud data.
+
+Args:
+    msg (PointCloud2): Point cloud message.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classimage__processor_1_1imageProcessor_a2efd541b8a8beadea18f03234616ad35}\label{classimage__processor_1_1imageProcessor_a2efd541b8a8beadea18f03234616ad35}} 
+\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}!show\_detections@{show\_detections}}
+\index{show\_detections@{show\_detections}!image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsubsection{\texorpdfstring{show\_detections()}{show\_detections()}}
+{\footnotesize\ttfamily def image\+\_\+processor.\+image\+Processor.\+show\+\_\+detections (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Show the image with detections on using openCV libraries
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classimage__processor_1_1imageProcessor_af6aed1c8f761e8bd8bbb16871b790415}\label{classimage__processor_1_1imageProcessor_af6aed1c8f761e8bd8bbb16871b790415}} 
+\index{image\_processor.imageProcessor@{image\_processor.imageProcessor}!show\_objects\_poses@{show\_objects\_poses}}
+\index{show\_objects\_poses@{show\_objects\_poses}!image\_processor.imageProcessor@{image\_processor.imageProcessor}}
+\doxysubsubsection{\texorpdfstring{show\_objects\_poses()}{show\_objects\_poses()}}
+{\footnotesize\ttfamily def image\+\_\+processor.\+image\+Processor.\+show\+\_\+objects\+\_\+poses (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Display the detected rotation on the objects as cartesian axes with openCV\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sergio/ros\+\_\+ws/src/locosim/robot\+\_\+control/lab\+\_\+exercises/lab\+\_\+group\+\_\+w/scripts/image\+\_\+processor.\+py\end{DoxyCompactItemize}

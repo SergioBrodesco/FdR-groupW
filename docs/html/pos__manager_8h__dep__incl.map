@@ -1,0 +1,6 @@
+<map id="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/lab_group_w/include/pos_manager.h" name="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/lab_group_w/include/pos_manager.h">
+<area shape="rect" id="node1" title="Header of the class Pos_manager, used to handle publishers." alt="" coords="134,5,329,76"/>
+<area shape="rect" id="node2" href="$motion__processor_8h.html" title="Header of the motion_processor.cpp file." alt="" coords="5,124,228,195"/>
+<area shape="rect" id="node4" href="$pos__manager_8cpp.html" title="Implementation of the class we use to comunicate with the real/simulated robot." alt="" coords="252,124,443,195"/>
+<area shape="rect" id="node3" href="$motion__processor_8cpp.html" title="Implementation of the ROS node motion_processor, that we use to compute and send trajectories to the ..." alt="" coords="11,243,222,313"/>
+</map>

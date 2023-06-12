@@ -1,0 +1,202 @@
+\hypertarget{classPos__manager}{}\doxysection{Pos\+\_\+manager Class Reference}
+\label{classPos__manager}\index{Pos\_manager@{Pos\_manager}}
+
+
+pos\+\_\+manager is a class that we use to publish joint angles for the real/simulated robot  
+
+
+
+
+{\ttfamily \#include $<$pos\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPos__manager_a2acea4eab0c3af5dbfb7a019227f9238}{Pos\+\_\+manager}} (ros\+::\+Node\+Handle node)
+\begin{DoxyCompactList}\small\item\em Constructor for a new \mbox{\hyperlink{classPos__manager}{Pos\+\_\+manager}} object, differentiate between real and simulated robot, and soft/rigid gripper. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPos__manager_a6f84f7d126329a1ee4b48b881e9b49bb}{send\+\_\+\+Reference}} (Eigen\+::\+Vector\+Xd q\+\_\+des, double \mbox{\hyperlink{motion__processor_8h_a2242a375bebbd1a1d1cf02a80d2715a2}{diameter}}=0, Eigen\+::\+Vector\+Xd qd\+\_\+des=Eigen\+::\+Vector\+Xd(), Eigen\+::\+Vector\+Xd tau\+\_\+ffwd=Eigen\+::\+Vector\+Xd())
+\begin{DoxyCompactList}\small\item\em Function used to publish robot instructions, calls \mbox{\hyperlink{classPos__manager_ac63b9c4812a92e4f6a1e2c824d1fcd1e}{send\+\_\+full\+\_\+joint\+\_\+state()}} or \mbox{\hyperlink{classPos__manager_a4f1f3e79528b8ecf88067144df8151ba}{send\+\_\+reduced\+\_\+joint\+\_\+state()}}, depending on how much information we can publish. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPos__manager_a91e4e9140568cfc1152d7acc215cbc0d}{init\+Filter}} (const int \&size)
+\begin{DoxyCompactList}\small\item\em Function that initializes a filter (used fon gripper fingers in simulation) \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classPos__manager_aeac0c39e165d4eff55e5ab713df2dd59}{second\+Order\+Filter}} (Eigen\+::\+Vector\+Xd input, const double rate, const double settling\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Function that applies the filter on a given input (gripper joint in simulation) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPos__manager_ac63b9c4812a92e4f6a1e2c824d1fcd1e}{send\+\_\+full\+\_\+joint\+\_\+state}} (Eigen\+::\+Vector\+Xd q\+\_\+des, double \mbox{\hyperlink{motion__processor_8h_a2242a375bebbd1a1d1cf02a80d2715a2}{diameter}}=0, Eigen\+::\+Vector\+Xd qd\+\_\+des=Eigen\+::\+Vector\+Xd(), Eigen\+::\+Vector\+Xd tau\+\_\+ffwd=Eigen\+::\+Vector\+Xd())
+\begin{DoxyCompactList}\small\item\em Function used to publish when using \char`\"{}torque\char`\"{} control mode in simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPos__manager_a4f1f3e79528b8ecf88067144df8151ba}{send\+\_\+reduced\+\_\+joint\+\_\+state}} (Eigen\+::\+Vector\+Xd q\+\_\+des, double \mbox{\hyperlink{motion__processor_8h_a2242a375bebbd1a1d1cf02a80d2715a2}{diameter}}=0)
+\begin{DoxyCompactList}\small\item\em Function used to only publish joint and gripper positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPos__manager_af3a3f0f26aec91d9ebb56fa3f0c3e2c9}\label{classPos__manager_af3a3f0f26aec91d9ebb56fa3f0c3e2c9}} 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classPos__manager_af3a3f0f26aec91d9ebb56fa3f0c3e2c9}{pos\+\_\+manager\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em node we use to instantiate the publishers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_a6d65e09b0d4a315d767b305ff2d80f45}\label{classPos__manager_a6d65e09b0d4a315d767b305ff2d80f45}} 
+bool \mbox{\hyperlink{classPos__manager_a6d65e09b0d4a315d767b305ff2d80f45}{real\+\_\+robot}}
+\begin{DoxyCompactList}\small\item\em boolean representing real or simulated robot (true = R\+E\+AL R\+O\+B\+OT, false = S\+I\+M\+U\+L\+A\+T\+I\+ON) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_ab6473cac26df6c0c1951ddaed833c18b}\label{classPos__manager_ab6473cac26df6c0c1951ddaed833c18b}} 
+bool \mbox{\hyperlink{classPos__manager_ab6473cac26df6c0c1951ddaed833c18b}{gripper\+\_\+sim}}
+\begin{DoxyCompactList}\small\item\em boolean to see if we want to utilize the gripper during simulation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_a159ca0570173169508a67161b0f416d9}\label{classPos__manager_a159ca0570173169508a67161b0f416d9}} 
+bool \mbox{\hyperlink{classPos__manager_a159ca0570173169508a67161b0f416d9}{soft\+\_\+gripper}}
+\begin{DoxyCompactList}\small\item\em boolean differentiating between soft and rigid gripper (true = S\+O\+FT G\+R\+I\+P\+P\+ER, false = R\+I\+G\+ID G\+R\+I\+P\+P\+ER) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_aeb5193b66e234f8cdded44bc6eb7c17e}\label{classPos__manager_aeb5193b66e234f8cdded44bc6eb7c17e}} 
+int \mbox{\hyperlink{classPos__manager_aeb5193b66e234f8cdded44bc6eb7c17e}{number\+\_\+of\+\_\+fingers}}
+\begin{DoxyCompactList}\small\item\em number of fingers decided from the soft\+\_\+gripper variable \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_abe0131425ca6480329559f20b981bb2e}\label{classPos__manager_abe0131425ca6480329559f20b981bb2e}} 
+int \mbox{\hyperlink{classPos__manager_abe0131425ca6480329559f20b981bb2e}{number\+\_\+of\+\_\+joints}}
+\begin{DoxyCompactList}\small\item\em number of joints of the ur5 robot exluding the gripper fingers (in our case its always 6) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_a077e7cfa24ffc3942723bddccbd0413c}\label{classPos__manager_a077e7cfa24ffc3942723bddccbd0413c}} 
+std\+::string \mbox{\hyperlink{classPos__manager_a077e7cfa24ffc3942723bddccbd0413c}{control\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em string representing the control type (\char`\"{}position\char`\"{} or \char`\"{}torque\char`\"{}, we only use position) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_a6a669386892d5d154efeae6b0a51de07}\label{classPos__manager_a6a669386892d5d154efeae6b0a51de07}} 
+sensor\+\_\+msgs\+::\+Joint\+State \mbox{\hyperlink{classPos__manager_a6a669386892d5d154efeae6b0a51de07}{joint\+State\+\_\+msg\+\_\+sim}}
+\begin{DoxyCompactList}\small\item\em message we publish in the \mbox{\hyperlink{classPos__manager_ac63b9c4812a92e4f6a1e2c824d1fcd1e}{send\+\_\+full\+\_\+joint\+\_\+state()}} function \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_ae09e7fec82409ca10c046c48f910acd8}\label{classPos__manager_ae09e7fec82409ca10c046c48f910acd8}} 
+std\+\_\+msgs\+::\+Float64\+Multi\+Array \mbox{\hyperlink{classPos__manager_ae09e7fec82409ca10c046c48f910acd8}{joint\+State\+\_\+msg\+\_\+robot}}
+\begin{DoxyCompactList}\small\item\em message we publish in the \mbox{\hyperlink{classPos__manager_a4f1f3e79528b8ecf88067144df8151ba}{send\+\_\+reduced\+\_\+joint\+\_\+state()}} function \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_a6818b0a5fb030f0022281399da63de77}\label{classPos__manager_a6818b0a5fb030f0022281399da63de77}} 
+ros\+::\+Publisher \mbox{\hyperlink{classPos__manager_a6818b0a5fb030f0022281399da63de77}{pub\+\_\+des\+\_\+jstate}}
+\begin{DoxyCompactList}\small\item\em publisher for joint states (subscribes to a different topic, depending on real\+\_\+robot value) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_a8f5b50057c6e8a7fc2cf9f8e1d6e6d1d}\label{classPos__manager_a8f5b50057c6e8a7fc2cf9f8e1d6e6d1d}} 
+ros\+::\+Service\+Client \mbox{\hyperlink{classPos__manager_a8f5b50057c6e8a7fc2cf9f8e1d6e6d1d}{gripper\+\_\+client}}
+\begin{DoxyCompactList}\small\item\em service client to make a service call to move\+\_\+gripper() when using the real robot \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_ae008ddc4961b3180121bee1116160212}\label{classPos__manager_ae008ddc4961b3180121bee1116160212}} 
+ros\+\_\+impedance\+\_\+controller\+::generic\+\_\+float \mbox{\hyperlink{classPos__manager_ae008ddc4961b3180121bee1116160212}{srv}}
+\begin{DoxyCompactList}\small\item\em message we use for the rosservice call to move\+\_\+gripper() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_a974be19b69a3e51f5e8583fd92e565ae}\label{classPos__manager_a974be19b69a3e51f5e8583fd92e565ae}} 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classPos__manager_a974be19b69a3e51f5e8583fd92e565ae}{filter\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em first filter used on \mbox{\hyperlink{classPos__manager_aeac0c39e165d4eff55e5ab713df2dd59}{second\+Order\+Filter()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPos__manager_a2315a0aac6ad79c3221764c5691e0bf3}\label{classPos__manager_a2315a0aac6ad79c3221764c5691e0bf3}} 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classPos__manager_a2315a0aac6ad79c3221764c5691e0bf3}{filter\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em second filter used on \mbox{\hyperlink{classPos__manager_aeac0c39e165d4eff55e5ab713df2dd59}{second\+Order\+Filter()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+pos\+\_\+manager is a class that we use to publish joint angles for the real/simulated robot 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPos__manager_a2acea4eab0c3af5dbfb7a019227f9238}\label{classPos__manager_a2acea4eab0c3af5dbfb7a019227f9238}} 
+\index{Pos\_manager@{Pos\_manager}!Pos\_manager@{Pos\_manager}}
+\index{Pos\_manager@{Pos\_manager}!Pos\_manager@{Pos\_manager}}
+\doxysubsubsection{\texorpdfstring{Pos\_manager()}{Pos\_manager()}}
+{\footnotesize\ttfamily Pos\+\_\+manager\+::\+Pos\+\_\+manager (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{node }\end{DoxyParamCaption})}
+
+
+
+Constructor for a new \mbox{\hyperlink{classPos__manager}{Pos\+\_\+manager}} object, differentiate between real and simulated robot, and soft/rigid gripper. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & ros node we want this object to have reference to \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPos__manager_a91e4e9140568cfc1152d7acc215cbc0d}\label{classPos__manager_a91e4e9140568cfc1152d7acc215cbc0d}} 
+\index{Pos\_manager@{Pos\_manager}!initFilter@{initFilter}}
+\index{initFilter@{initFilter}!Pos\_manager@{Pos\_manager}}
+\doxysubsubsection{\texorpdfstring{initFilter()}{initFilter()}}
+{\footnotesize\ttfamily void Pos\+\_\+manager\+::init\+Filter (\begin{DoxyParamCaption}\item[{const int \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that initializes a filter (used fon gripper fingers in simulation) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & size of the filter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPos__manager_aeac0c39e165d4eff55e5ab713df2dd59}\label{classPos__manager_aeac0c39e165d4eff55e5ab713df2dd59}} 
+\index{Pos\_manager@{Pos\_manager}!secondOrderFilter@{secondOrderFilter}}
+\index{secondOrderFilter@{secondOrderFilter}!Pos\_manager@{Pos\_manager}}
+\doxysubsubsection{\texorpdfstring{secondOrderFilter()}{secondOrderFilter()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd Pos\+\_\+manager\+::second\+Order\+Filter (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{input,  }\item[{const double}]{rate,  }\item[{const double}]{settling\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that applies the filter on a given input (gripper joint in simulation) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & vector we want to filter \\
+\hline
+{\em rate} & frequency at which the filter is being applied \\
+\hline
+{\em settling\+\_\+time} & settling time of the filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Vector\+Xd filtered output obtained from the input vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPos__manager_ac63b9c4812a92e4f6a1e2c824d1fcd1e}\label{classPos__manager_ac63b9c4812a92e4f6a1e2c824d1fcd1e}} 
+\index{Pos\_manager@{Pos\_manager}!send\_full\_joint\_state@{send\_full\_joint\_state}}
+\index{send\_full\_joint\_state@{send\_full\_joint\_state}!Pos\_manager@{Pos\_manager}}
+\doxysubsubsection{\texorpdfstring{send\_full\_joint\_state()}{send\_full\_joint\_state()}}
+{\footnotesize\ttfamily void Pos\+\_\+manager\+::send\+\_\+full\+\_\+joint\+\_\+state (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{q\+\_\+des,  }\item[{double}]{diameter = {\ttfamily 0},  }\item[{Eigen\+::\+Vector\+Xd}]{qd\+\_\+des = {\ttfamily Eigen\+:\+:VectorXd()},  }\item[{Eigen\+::\+Vector\+Xd}]{tau\+\_\+ffwd = {\ttfamily Eigen\+:\+:VectorXd()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function used to publish when using \char`\"{}torque\char`\"{} control mode in simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+\_\+des} & joint angle we want to publish \\
+\hline
+{\em diameter} & diameter for opening or closing the gripper \\
+\hline
+{\em qd\+\_\+des} & joint velocity we want to publish \\
+\hline
+{\em tau\+\_\+ffwd} & joint effort we want to publish \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPos__manager_a4f1f3e79528b8ecf88067144df8151ba}\label{classPos__manager_a4f1f3e79528b8ecf88067144df8151ba}} 
+\index{Pos\_manager@{Pos\_manager}!send\_reduced\_joint\_state@{send\_reduced\_joint\_state}}
+\index{send\_reduced\_joint\_state@{send\_reduced\_joint\_state}!Pos\_manager@{Pos\_manager}}
+\doxysubsubsection{\texorpdfstring{send\_reduced\_joint\_state()}{send\_reduced\_joint\_state()}}
+{\footnotesize\ttfamily void Pos\+\_\+manager\+::send\+\_\+reduced\+\_\+joint\+\_\+state (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{q\+\_\+des,  }\item[{double}]{diameter = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function used to only publish joint and gripper positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+\_\+des} & joint angle we want to publish \\
+\hline
+{\em diameter} & diameter for opening or closing the gripper \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPos__manager_a6f84f7d126329a1ee4b48b881e9b49bb}\label{classPos__manager_a6f84f7d126329a1ee4b48b881e9b49bb}} 
+\index{Pos\_manager@{Pos\_manager}!send\_Reference@{send\_Reference}}
+\index{send\_Reference@{send\_Reference}!Pos\_manager@{Pos\_manager}}
+\doxysubsubsection{\texorpdfstring{send\_Reference()}{send\_Reference()}}
+{\footnotesize\ttfamily void Pos\+\_\+manager\+::send\+\_\+\+Reference (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{q\+\_\+des,  }\item[{double}]{diameter = {\ttfamily 0},  }\item[{Eigen\+::\+Vector\+Xd}]{qd\+\_\+des = {\ttfamily Eigen\+:\+:VectorXd()},  }\item[{Eigen\+::\+Vector\+Xd}]{tau\+\_\+ffwd = {\ttfamily Eigen\+:\+:VectorXd()} }\end{DoxyParamCaption})}
+
+
+
+Function used to publish robot instructions, calls \mbox{\hyperlink{classPos__manager_ac63b9c4812a92e4f6a1e2c824d1fcd1e}{send\+\_\+full\+\_\+joint\+\_\+state()}} or \mbox{\hyperlink{classPos__manager_a4f1f3e79528b8ecf88067144df8151ba}{send\+\_\+reduced\+\_\+joint\+\_\+state()}}, depending on how much information we can publish. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+\_\+des} & joint angle we want to publish \\
+\hline
+{\em diameter} & diameter for opening or closing the gripper \\
+\hline
+{\em qd\+\_\+des} & joint velocity we want to publish \\
+\hline
+{\em tau\+\_\+ffwd} & joint effort we want to publish \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sergio/ros\+\_\+ws/src/locosim/robot\+\_\+control/lab\+\_\+exercises/lab\+\_\+group\+\_\+w/include/\mbox{\hyperlink{pos__manager_8h}{pos\+\_\+manager.\+h}}\item 
+/home/sergio/ros\+\_\+ws/src/locosim/robot\+\_\+control/lab\+\_\+exercises/lab\+\_\+group\+\_\+w/src/\mbox{\hyperlink{pos__manager_8cpp}{pos\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

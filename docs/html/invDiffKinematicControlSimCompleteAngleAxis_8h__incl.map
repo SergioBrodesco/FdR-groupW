@@ -1,0 +1,13 @@
+<map id="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/lab_group_w/include/invDiffKinematicControlSimCompleteAngleAxis.h" name="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/lab_group_w/include/invDiffKinematicControlSimCompleteAngleAxis.h">
+<area shape="rect" id="node1" title="Header file containing the declaration of the functions we use to compute the Differential kinematic." alt="" coords="226,5,478,91"/>
+<area shape="rect" id="node2" href="$ur5Jac_8h.html" title="Header with the declaration of the function we use to compute the jacobian." alt="" coords="248,139,323,165"/>
+<area shape="rect" id="node11" href="$invDirKinematics_8h.html" title="Header file containing the declaration of the functions we use to compute the Direct and Inverse kine..." alt="" coords="347,139,493,165"/>
+<area shape="rect" id="node3" href="$utils_8h.html" title="Header containing commonly used functions and libraries." alt="" coords="321,213,383,240"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,288,61,315"/>
+<area shape="rect" id="node5" title=" " alt="" coords="85,288,165,315"/>
+<area shape="rect" id="node6" title=" " alt="" coords="190,288,253,315"/>
+<area shape="rect" id="node7" title=" " alt="" coords="277,288,427,315"/>
+<area shape="rect" id="node8" title=" " alt="" coords="451,288,522,315"/>
+<area shape="rect" id="node9" title=" " alt="" coords="546,288,611,315"/>
+<area shape="rect" id="node10" title=" " alt="" coords="635,288,698,315"/>
+</map>

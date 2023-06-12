@@ -1,0 +1,142 @@
+\hypertarget{invDiffKinematicControlSimCompleteAngleAxis_8cpp}{}\doxysection{/home/sergio/ros\+\_\+ws/src/locosim/robot\+\_\+control/lab\+\_\+exercises/lab\+\_\+group\+\_\+w/kinematic\+\_\+libs/inv\+Diff\+Kinematic\+Control\+Sim\+Complete\+Angle\+Axis.cpp File Reference}
+\label{invDiffKinematicControlSimCompleteAngleAxis_8cpp}\index{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/lab\_group\_w/kinematic\_libs/invDiffKinematicControlSimCompleteAngleAxis.cpp@{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/lab\_group\_w/kinematic\_libs/invDiffKinematicControlSimCompleteAngleAxis.cpp}}
+
+
+Implementation of the functions we use to compute the Differential kinematic.  
+
+
+{\ttfamily \#include \char`\"{}../include/inv\+Diff\+Kinematic\+Control\+Sim\+Complete\+Angle\+Axis.\+h\char`\"{}}\newline
+Include dependency graph for inv\+Diff\+Kinematic\+Control\+Sim\+Complete\+Angle\+Axis.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{invDiffKinematicControlSimCompleteAngleAxis_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3d \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a6c59e668c07e30ee99a13caf5097561d}{compute\+Orientation\+ErrorW}} (Matrix3d w\+\_\+\+R\+\_\+e, Matrix3d w\+\_\+\+R\+\_\+d)
+\begin{DoxyCompactList}\small\item\em Function that computes the orientation error of the end effector, using Angle axis instead of Euler angles. \end{DoxyCompactList}\item 
+Matrix3d \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a246e134a74638e00bfc58d18d3535370}{get\+\_\+optimal\+\_\+\+Kphi}} (const Vector\+Xd \&start\+\_\+cfg, const Vector\+Xd \&end\+\_\+cfg, const float base\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em Compute Kphi used in the \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8h_aa037a6a64e71c5ace019a5cf725992b2}{inv\+Diff\+Kinematic\+Control\+Complete\+Angle\+Axis()}} function. \end{DoxyCompactList}\item 
+Vector\+Xd \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8cpp_aa037a6a64e71c5ace019a5cf725992b2}{inv\+Diff\+Kinematic\+Control\+Complete\+Angle\+Axis}} (const Vector\+Xd \&\mbox{\hyperlink{motion__processor_8h_ab503cb0eb401bbf09902cc6c9e1f628f}{q}}, const Vector3d \&xe, const Vector3d \&xd, const Vector3d \&vd, const Matrix3d \&w\+\_\+\+R\+\_\+e, const Vector3d \&phid, const Vector3d \&phiddot, const Matrix3d \&Kp, const Matrix3d \&Kphi)
+\begin{DoxyCompactList}\small\item\em Computes the joint velocities we to use for the Differential kinematics.~\newline
+This is called by \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8h_a5febd333cd255cf8e86aaea5b1fedf5c}{inv\+Diff\+Kinematic\+Control\+Sim\+Complete\+Angle\+Axis()}} for every configuration in a trajectory. \end{DoxyCompactList}\item 
+std\+::tuple$<$ Matrix\+Xd, Matrix\+Xd, Matrix\+Xd $>$ \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a5febd333cd255cf8e86aaea5b1fedf5c}{inv\+Diff\+Kinematic\+Control\+Sim\+Complete\+Angle\+Axis}} (const Matrix\+Xd \&xd, const Matrix\+Xd \&phid, const Vector\+Xd \&T\+H0, const Vector\+Xd \&T\+Hf, const double minT, const double maxT, const double Dt)
+\begin{DoxyCompactList}\small\item\em Computes the differential kinematic over a received trajectory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the functions we use to compute the Differential kinematic. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a6c59e668c07e30ee99a13caf5097561d}\label{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a6c59e668c07e30ee99a13caf5097561d}} 
+\index{invDiffKinematicControlSimCompleteAngleAxis.cpp@{invDiffKinematicControlSimCompleteAngleAxis.cpp}!computeOrientationErrorW@{computeOrientationErrorW}}
+\index{computeOrientationErrorW@{computeOrientationErrorW}!invDiffKinematicControlSimCompleteAngleAxis.cpp@{invDiffKinematicControlSimCompleteAngleAxis.cpp}}
+\doxysubsubsection{\texorpdfstring{computeOrientationErrorW()}{computeOrientationErrorW()}}
+{\footnotesize\ttfamily Vector3d compute\+Orientation\+ErrorW (\begin{DoxyParamCaption}\item[{Matrix3d}]{w\+\_\+\+R\+\_\+e,  }\item[{Matrix3d}]{w\+\_\+\+R\+\_\+d }\end{DoxyParamCaption})}
+
+
+
+Function that computes the orientation error of the end effector, using Angle axis instead of Euler angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w\+\_\+\+R\+\_\+e} & current end effector rotation (rotation matrix) \\
+\hline
+{\em w\+\_\+\+R\+\_\+d} & desired end effector rotation (rotation matrix) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector3d orientation error between current and desired end effector rotation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a246e134a74638e00bfc58d18d3535370}\label{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a246e134a74638e00bfc58d18d3535370}} 
+\index{invDiffKinematicControlSimCompleteAngleAxis.cpp@{invDiffKinematicControlSimCompleteAngleAxis.cpp}!get\_optimal\_Kphi@{get\_optimal\_Kphi}}
+\index{get\_optimal\_Kphi@{get\_optimal\_Kphi}!invDiffKinematicControlSimCompleteAngleAxis.cpp@{invDiffKinematicControlSimCompleteAngleAxis.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_optimal\_Kphi()}{get\_optimal\_Kphi()}}
+{\footnotesize\ttfamily Matrix3d get\+\_\+optimal\+\_\+\+Kphi (\begin{DoxyParamCaption}\item[{const Vector\+Xd \&}]{start\+\_\+cfg,  }\item[{const Vector\+Xd \&}]{end\+\_\+cfg,  }\item[{const float}]{base\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+Compute Kphi used in the \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8h_aa037a6a64e71c5ace019a5cf725992b2}{inv\+Diff\+Kinematic\+Control\+Complete\+Angle\+Axis()}} function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+\_\+cfg} & start joint configuration \\
+\hline
+{\em end\+\_\+cfg} & finish joint configuration \\
+\hline
+{\em base\+\_\+factor} & base factor added to the computed Kphi (to make sure its never 0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix3d matrix containing the values for Kphi we are going to use on the orientation error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{invDiffKinematicControlSimCompleteAngleAxis_8cpp_aa037a6a64e71c5ace019a5cf725992b2}\label{invDiffKinematicControlSimCompleteAngleAxis_8cpp_aa037a6a64e71c5ace019a5cf725992b2}} 
+\index{invDiffKinematicControlSimCompleteAngleAxis.cpp@{invDiffKinematicControlSimCompleteAngleAxis.cpp}!invDiffKinematicControlCompleteAngleAxis@{invDiffKinematicControlCompleteAngleAxis}}
+\index{invDiffKinematicControlCompleteAngleAxis@{invDiffKinematicControlCompleteAngleAxis}!invDiffKinematicControlSimCompleteAngleAxis.cpp@{invDiffKinematicControlSimCompleteAngleAxis.cpp}}
+\doxysubsubsection{\texorpdfstring{invDiffKinematicControlCompleteAngleAxis()}{invDiffKinematicControlCompleteAngleAxis()}}
+{\footnotesize\ttfamily Vector\+Xd inv\+Diff\+Kinematic\+Control\+Complete\+Angle\+Axis (\begin{DoxyParamCaption}\item[{const Vector\+Xd \&}]{q,  }\item[{const Vector3d \&}]{xe,  }\item[{const Vector3d \&}]{xd,  }\item[{const Vector3d \&}]{vd,  }\item[{const Matrix3d \&}]{w\+\_\+\+R\+\_\+e,  }\item[{const Vector3d \&}]{phid,  }\item[{const Vector3d \&}]{phiddot,  }\item[{const Matrix3d \&}]{Kp,  }\item[{const Matrix3d \&}]{Kphi }\end{DoxyParamCaption})}
+
+
+
+Computes the joint velocities we to use for the Differential kinematics.~\newline
+This is called by \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8h_a5febd333cd255cf8e86aaea5b1fedf5c}{inv\+Diff\+Kinematic\+Control\+Sim\+Complete\+Angle\+Axis()}} for every configuration in a trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & \\
+\hline
+{\em xe} & current end effector position \\
+\hline
+{\em xd} & desired end effector position \\
+\hline
+{\em vd} & desired end effector velocity \\
+\hline
+{\em w\+\_\+\+R\+\_\+e} & current end effector rotation (rotation matrix) \\
+\hline
+{\em phid} & desired end effector rotation (euler angles) \\
+\hline
+{\em phiddot} & desired end effector angular velocity \\
+\hline
+{\em Kp} & scaling factor for the position error \\
+\hline
+{\em Kphi} & scaling factor for the orientation error obtained from \mbox{\hyperlink{invDiffKinematicControlSimCompleteAngleAxis_8h_a246e134a74638e00bfc58d18d3535370}{get\+\_\+optimal\+\_\+\+Kphi()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Xd joint velocities corrected using the position and orientation error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a5febd333cd255cf8e86aaea5b1fedf5c}\label{invDiffKinematicControlSimCompleteAngleAxis_8cpp_a5febd333cd255cf8e86aaea5b1fedf5c}} 
+\index{invDiffKinematicControlSimCompleteAngleAxis.cpp@{invDiffKinematicControlSimCompleteAngleAxis.cpp}!invDiffKinematicControlSimCompleteAngleAxis@{invDiffKinematicControlSimCompleteAngleAxis}}
+\index{invDiffKinematicControlSimCompleteAngleAxis@{invDiffKinematicControlSimCompleteAngleAxis}!invDiffKinematicControlSimCompleteAngleAxis.cpp@{invDiffKinematicControlSimCompleteAngleAxis.cpp}}
+\doxysubsubsection{\texorpdfstring{invDiffKinematicControlSimCompleteAngleAxis()}{invDiffKinematicControlSimCompleteAngleAxis()}}
+{\footnotesize\ttfamily std\+::tuple$<$Matrix\+Xd, Matrix\+Xd, Matrix\+Xd$>$ inv\+Diff\+Kinematic\+Control\+Sim\+Complete\+Angle\+Axis (\begin{DoxyParamCaption}\item[{const Matrix\+Xd \&}]{xd,  }\item[{const Matrix\+Xd \&}]{phid,  }\item[{const Vector\+Xd \&}]{T\+H0,  }\item[{const Vector\+Xd \&}]{T\+Hf,  }\item[{const double}]{minT,  }\item[{const double}]{maxT,  }\item[{const double}]{Dt }\end{DoxyParamCaption})}
+
+
+
+Computes the differential kinematic over a received trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xd} & matrix containing end effector positions at each time step of the trajectory \\
+\hline
+{\em phid} & matrix containing end effector rotations at each time step of the trajectory \\
+\hline
+{\em T\+H0} & joint configuration at the start of the trajectory \\
+\hline
+{\em T\+Hf} & joint configuration at the end of the trajectory \\
+\hline
+{\em minT} & time of the start of the trajectory \\
+\hline
+{\em maxT} & time of the end of the trajectory \\
+\hline
+{\em Dt} & sampling time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::tuple$<$\+Matrix\+Xd, Matrix\+Xd, Matrix\+Xd$>$ corrected trajectory (joint positions, end effector positions, end effector rotations) 
+\end{DoxyReturn}

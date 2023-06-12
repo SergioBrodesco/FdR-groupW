@@ -1,0 +1,12 @@
+<map id="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/lab_group_w/kinematic_libs/invDirKinematics.cpp" name="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/lab_group_w/kinematic_libs/invDirKinematics.cpp">
+<area shape="rect" id="node1" title="Implementation of the functions we use to compute the Direct and Inverse kinematics." alt="" coords="211,5,493,76"/>
+<area shape="rect" id="node2" href="$invDirKinematics_8h.html" title="Header file containing the declaration of the functions we use to compute the Direct and Inverse kine..." alt="" coords="247,124,457,151"/>
+<area shape="rect" id="node3" href="$utils_8h.html" title="Header containing commonly used functions and libraries." alt="" coords="321,199,383,225"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,273,61,300"/>
+<area shape="rect" id="node5" title=" " alt="" coords="85,273,165,300"/>
+<area shape="rect" id="node6" title=" " alt="" coords="190,273,253,300"/>
+<area shape="rect" id="node7" title=" " alt="" coords="277,273,427,300"/>
+<area shape="rect" id="node8" title=" " alt="" coords="451,273,522,300"/>
+<area shape="rect" id="node9" title=" " alt="" coords="546,273,611,300"/>
+<area shape="rect" id="node10" title=" " alt="" coords="635,273,698,300"/>
+</map>

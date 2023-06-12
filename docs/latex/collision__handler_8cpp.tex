@@ -1,0 +1,167 @@
+\hypertarget{collision__handler_8cpp}{}\doxysection{/home/sergio/ros\+\_\+ws/src/locosim/robot\+\_\+control/lab\+\_\+exercises/lab\+\_\+group\+\_\+w/src/collision\+\_\+handler.cpp File Reference}
+\label{collision__handler_8cpp}\index{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/lab\_group\_w/src/collision\_handler.cpp@{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/lab\_group\_w/src/collision\_handler.cpp}}
+
+
+Implementation of the functions used for collision control.  
+
+
+{\ttfamily \#include \char`\"{}../include/collision\+\_\+handler.\+h\char`\"{}}\newline
+Include dependency graph for collision\+\_\+handler.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{collision__handler_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{collision__handler_8cpp_a0789296ca30fd68983b4e316ad05e058}{get\+\_\+joint\+\_\+info}} (const int joint\+\_\+index, const Vector\+Xd \&config, Vector3d \&joint\+\_\+pos, Matrix3d \&joint\+\_\+rot, Vector3d \&joint\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Get specific joint information (joint\+\_\+pos, joint\+\_\+rot, joint\+\_\+length), knowing the current configuration. \end{DoxyCompactList}\item 
+Matrix\+Xd \mbox{\hyperlink{collision__handler_8cpp_a1ceab3b1b0a1b5d3934ab3ebd6b704f0}{get\+\_\+square\+\_\+matrix\+\_\+plane}} (int dimension, float w)
+\begin{DoxyCompactList}\small\item\em Function used to get a set of 4 points (vertices of a square) in the same plane (around the robot arm) \end{DoxyCompactList}\item 
+std\+::vector$<$ Vector3d $>$ \mbox{\hyperlink{collision__handler_8cpp_a48d76872cba4f7409a7d07c941cd0920}{get\+\_\+joint\+\_\+collision\+\_\+points}} (const double square\+\_\+spacing, const double box\+\_\+extents, const Vector3d \&joint\+\_\+pos, const Matrix3d \&joint\+\_\+rot, const Vector3d \&joint\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Get the points that we use to evaluate collisions for a specific joint. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{collision__handler_8cpp_ac2b0e0fed73bcb18f4477ff898583094}\label{collision__handler_8cpp_ac2b0e0fed73bcb18f4477ff898583094}} 
+bool {\bfseries violates\+\_\+joint\+\_\+limits} (const Vector\+Xd \&conf)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} $>$ \mbox{\hyperlink{collision__handler_8cpp_a9c4107f59990c1c39a42a51a574f8d1c}{define\+\_\+world\+\_\+c\+Boxes}} ()
+\begin{DoxyCompactList}\small\item\em Function used to create the \char`\"{}fixed\char`\"{} collision boxes (Table, ...) that will not change during the robot motion.~\newline
+The collision box for the arm is evaluated for every configuration we check collisions on. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{collision__handler_8cpp_a1bef3c6653b8ed1e4654b3fefbabb804}{is\+Point\+Inside\+Box}} (const Eigen\+::\+Vector3d \&point, const \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} \&box)
+\begin{DoxyCompactList}\small\item\em Function that checks if a given point is inside of a \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{collision__handler_8cpp_a42eaf1fee4d7d491a76665c5a75e577d}{check\+Collisions}} (const Matrix\+Xd \&joint\+\_\+configs, int conf\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Function that checks for collisions with the world or the robot itself (by building \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} objects around the arm\textquotesingle{}s links).~\newline
+This control is done every 10 configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the functions used for collision control. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{collision__handler_8cpp_a42eaf1fee4d7d491a76665c5a75e577d}\label{collision__handler_8cpp_a42eaf1fee4d7d491a76665c5a75e577d}} 
+\index{collision\_handler.cpp@{collision\_handler.cpp}!checkCollisions@{checkCollisions}}
+\index{checkCollisions@{checkCollisions}!collision\_handler.cpp@{collision\_handler.cpp}}
+\doxysubsubsection{\texorpdfstring{checkCollisions()}{checkCollisions()}}
+{\footnotesize\ttfamily bool check\+Collisions (\begin{DoxyParamCaption}\item[{const Matrix\+Xd \&}]{joint\+\_\+configs,  }\item[{int}]{conf\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Function that checks for collisions with the world or the robot itself (by building \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} objects around the arm\textquotesingle{}s links).~\newline
+This control is done every 10 configurations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+configs} & configurations of the joints during a computed trajectory \\
+\hline
+{\em conf\+\_\+index} & index of the final configuration we are evaluating \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the trajectory doesn\textquotesingle{}t have any collisions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{collision__handler_8cpp_a9c4107f59990c1c39a42a51a574f8d1c}\label{collision__handler_8cpp_a9c4107f59990c1c39a42a51a574f8d1c}} 
+\index{collision\_handler.cpp@{collision\_handler.cpp}!define\_world\_cBoxes@{define\_world\_cBoxes}}
+\index{define\_world\_cBoxes@{define\_world\_cBoxes}!collision\_handler.cpp@{collision\_handler.cpp}}
+\doxysubsubsection{\texorpdfstring{define\_world\_cBoxes()}{define\_world\_cBoxes()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structCollisionBox}{Collision\+Box}}$>$ define\+\_\+world\+\_\+c\+Boxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function used to create the \char`\"{}fixed\char`\"{} collision boxes (Table, ...) that will not change during the robot motion.~\newline
+The collision box for the arm is evaluated for every configuration we check collisions on. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Collision\+Box$>$ List of \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{collision__handler_8cpp_a48d76872cba4f7409a7d07c941cd0920}\label{collision__handler_8cpp_a48d76872cba4f7409a7d07c941cd0920}} 
+\index{collision\_handler.cpp@{collision\_handler.cpp}!get\_joint\_collision\_points@{get\_joint\_collision\_points}}
+\index{get\_joint\_collision\_points@{get\_joint\_collision\_points}!collision\_handler.cpp@{collision\_handler.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_joint\_collision\_points()}{get\_joint\_collision\_points()}}
+{\footnotesize\ttfamily std\+::vector$<$Vector3d$>$ get\+\_\+joint\+\_\+collision\+\_\+points (\begin{DoxyParamCaption}\item[{const double}]{square\+\_\+spacing,  }\item[{const double}]{box\+\_\+extents,  }\item[{const Vector3d \&}]{joint\+\_\+pos,  }\item[{const Matrix3d \&}]{joint\+\_\+rot,  }\item[{const Vector3d \&}]{joint\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Get the points that we use to evaluate collisions for a specific joint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em square\+\_\+spacing} & spacing between each set of 4 points along the robot\textquotesingle{}s link \\
+\hline
+{\em box\+\_\+extents} & distance (divided by 2) that the 4 points have from eachother \\
+\hline
+{\em joint\+\_\+pos} & position of the joint \\
+\hline
+{\em joint\+\_\+rot} & rotation of the joint \\
+\hline
+{\em joint\+\_\+length} & length of the joint along the 3 dimensions (X, Y, Z) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Vector3d$>$ vector containing a set of points (built around the arm) that we\textquotesingle{}ll use to check for collisions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{collision__handler_8cpp_a0789296ca30fd68983b4e316ad05e058}\label{collision__handler_8cpp_a0789296ca30fd68983b4e316ad05e058}} 
+\index{collision\_handler.cpp@{collision\_handler.cpp}!get\_joint\_info@{get\_joint\_info}}
+\index{get\_joint\_info@{get\_joint\_info}!collision\_handler.cpp@{collision\_handler.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_joint\_info()}{get\_joint\_info()}}
+{\footnotesize\ttfamily void get\+\_\+joint\+\_\+info (\begin{DoxyParamCaption}\item[{const int}]{joint\+\_\+index,  }\item[{const Vector\+Xd \&}]{config,  }\item[{Vector3d \&}]{joint\+\_\+pos,  }\item[{Matrix3d \&}]{joint\+\_\+rot,  }\item[{Vector3d \&}]{joint\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Get specific joint information (joint\+\_\+pos, joint\+\_\+rot, joint\+\_\+length), knowing the current configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+index} & index of the joint we want informations about \\
+\hline
+{\em config} & current configuration of the joints \\
+\hline
+{\em joint\+\_\+pos} & position of the joint with regards to the robot base frame, obtained with the same method as Direct kinematics \\
+\hline
+{\em joint\+\_\+rot} & rotation of the joint with regards to the robot base frame, obtained with the same method as Direct kinematics \\
+\hline
+{\em joint\+\_\+length} & length of the joint along the three axis (X, Y, Z) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{collision__handler_8cpp_a1ceab3b1b0a1b5d3934ab3ebd6b704f0}\label{collision__handler_8cpp_a1ceab3b1b0a1b5d3934ab3ebd6b704f0}} 
+\index{collision\_handler.cpp@{collision\_handler.cpp}!get\_square\_matrix\_plane@{get\_square\_matrix\_plane}}
+\index{get\_square\_matrix\_plane@{get\_square\_matrix\_plane}!collision\_handler.cpp@{collision\_handler.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_square\_matrix\_plane()}{get\_square\_matrix\_plane()}}
+{\footnotesize\ttfamily Matrix\+Xd get\+\_\+square\+\_\+matrix\+\_\+plane (\begin{DoxyParamCaption}\item[{int}]{dimension,  }\item[{float}]{w }\end{DoxyParamCaption})}
+
+
+
+Function used to get a set of 4 points (vertices of a square) in the same plane (around the robot arm) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimension} & axis that we want our square to be perpendicular to, so that our square is built around the robot\textquotesingle{}s link \\
+\hline
+{\em w} & length representing half of the square\textquotesingle{}s side \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix\+Xd matrix containing the 4 vertices of the square 
+\end{DoxyReturn}
+\mbox{\Hypertarget{collision__handler_8cpp_a1bef3c6653b8ed1e4654b3fefbabb804}\label{collision__handler_8cpp_a1bef3c6653b8ed1e4654b3fefbabb804}} 
+\index{collision\_handler.cpp@{collision\_handler.cpp}!isPointInsideBox@{isPointInsideBox}}
+\index{isPointInsideBox@{isPointInsideBox}!collision\_handler.cpp@{collision\_handler.cpp}}
+\doxysubsubsection{\texorpdfstring{isPointInsideBox()}{isPointInsideBox()}}
+{\footnotesize\ttfamily bool is\+Point\+Inside\+Box (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{point,  }\item[{const \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} \&}]{box }\end{DoxyParamCaption})}
+
+
+
+Function that checks if a given point is inside of a \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & point we\textquotesingle{}ll use to check for collisions \\
+\hline
+{\em box} & object we want to know collisions on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the point is inside the \mbox{\hyperlink{structCollisionBox}{Collision\+Box}} (we have a collision) 
+\end{DoxyReturn}
