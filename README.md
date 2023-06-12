@@ -66,7 +66,7 @@ if you have a local set of weigths you can copy it in the /scripts folder as wel
 
 <br>
 
-### modify image_processor.py
+### Modify image_processor.py
 
 <br>
 
