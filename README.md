@@ -10,6 +10,9 @@ Open [**Project-1_Robot-Robotic_Manipulator.pdf**](https://github.com/SergioBrod
 <br>
 
 If you want to read the **Doxygen Documentation** for the code, you can find it in the **FdR-groupW/docs** folder after completing the setup explained later.
+
+<br>
+
 Inside the folder you can find 2 types of documentation:
 static html pages in **FdR-groupW/docs**, and a pdf file in **FdR-groupW/docs/latex**.
 
