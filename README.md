@@ -30,7 +30,7 @@ an html folder that contains the static html pages, and a latex folder that cont
 
 <br>
 
-If you want to view the html page, you need to open the index.html file inside the html folder:
+To view the html page, you need to open the index.html file inside the html folder:
 
 <br>
 
@@ -41,7 +41,7 @@ xdg-open index.html
 
 <br>
 
-If you want to view the pdf, you need to open the refman.pdf file inside the latex folder:
+To view the pdf, you need to open the refman.pdf file inside the latex folder:
 
 <br>
 
