@@ -16,6 +16,8 @@ cd ~/ros_ws/src/locosim/robot_control/lab_exercises
 git clone https://github.com/SergioBrodesco/FdR-groupW.git
 ```
 
+<br>
+
 Some files need to be included in the Locosim environment, so first go in the locosim_addOns folder first copy all the mesh and custom material files
 
 ```
@@ -54,9 +56,15 @@ cd yolov5
 pip install -r requirements.txt  # install
 ```
 
+<br>
+
 if you have a local set of weigths you can copy it in the /scripts folder as well
 
+<br>
+
 ### modify image_processor.py
+
+<br>
 
 some code lines of /scripts/image_processr.py containing absolute paths to your yolov5 model, mesh files and weights needs to be modified in order to work properly...
 
@@ -75,8 +83,12 @@ now recompile
 cd ~/ros_ws
 catkin_make install
 ```
+
 <br>
+
 everything should be set properly
+
+<br>
 
 # Testing
 
