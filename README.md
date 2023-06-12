@@ -96,6 +96,10 @@ everything should be set properly
 
 # Testing
 
+First you need to change the world file with one of your choise... we suggest as first test the "my_world.world" file, to do that edit /ur5_generic.py in the following line, and specify '<your_world_name.world>' instead
+https://github.com/mfocchi/robot_control/blob/25569e7ad103d58ae0b6095f7ccd570975b36218/lab_exercises/lab_palopoli/ur5_generic.py#L75
+<br>
+
 To run the simulation first open a new terminal and run the /ur5_generic.py script, this will initialize all the basic nodes and the Gazebo enviroment
 ```
 cd ~/ros_ws/src/locosim/robot_control/lab_exercises/lab_palopoli
@@ -116,5 +120,8 @@ rosrun lab_group_w image_processor
 ```
 
 That's it! You should see the simulation running!
+
+<br>
+
 
 
