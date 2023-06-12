@@ -7,6 +7,31 @@ Open [**Project-1_Robot-Robotic_Manipulator.pdf**](https://github.com/SergioBrod
 
 ![Alt text](https://github.com/SergioBrodesco/FdR-groupW/blob/master/media/Arm_alone.jpg)
 
+<br>
+
+If you want to read the **Doxygen Documentation** for the code, you can find it in the **FdR-groupW/docs** folder after completing the setup explained later.
+Inside the folder you can find 2 types of documentation:
+static html pages in **FdR-groupW/docs**, and a pdf file in **FdR-groupW/docs/latex**.
+
+<br>
+
+To view the html page, you need to open the **index.html** file inside the html folder:
+
+<br>
+
+```
+cd ~/ros_ws/src/locosim/robot_control/lab_exercises/FdR-groupW/docs/html
+xdg-open index.html
+```
+
+<br>
+
+Alternatively, you can view the pdf [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/docs/latex/refman.pdf)
+
+<br>
+
+<br>
+
 # How to use
 <br>
 
@@ -20,34 +45,6 @@ The repo consist of a ROS 1 package that needs to be integrated with the Locosim
 ```
 cd ~/ros_ws/src/locosim/robot_control/lab_exercises
 git clone https://github.com/SergioBrodesco/FdR-groupW.git
-```
-
-<br>
-
-If you want to read the **Doxygen Documentation** for the code, you can find it in the docs folder.
-Here you can find 2 types of documentation:
-an html folder that contains the static html pages, and a latex folder that contains pdf file.
-
-<br>
-
-To view the html page, you need to open the **index.html** file inside the html folder:
-
-<br>
-
-```
-cd FdR-groupW/docs/html
-xdg-open index.html
-```
-
-<br>
-
-To view the pdf, you need to open the **refman.pdf** file inside the latex folder:
-
-<br>
-
-```
-cd FdR-groupW/docs/latex
-xdg-open refman.pdf
 ```
 
 <br>
