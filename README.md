@@ -14,7 +14,9 @@ If you want to read the **Doxygen Documentation** for the code, check the genera
 <br>
 
 Alternatively, you can find the html version of the documentation after completing the setup explained [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/README.md#how-to-use).
+
 <br>
+
 To view the html page, you need to open the **index.html** file inside the **FdR-groupW/docs/html** folder
 
 <br>
