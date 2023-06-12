@@ -29,7 +29,7 @@ If you want to read the **Doxygen Documentation** for the code, move into the /d
 <br>
 
 ```
-cd docs
+cd FdR-groupW/docs
 ```
 
 Here you can find 2 folders:
