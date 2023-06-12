@@ -23,7 +23,9 @@ git clone https://github.com/SergioBrodesco/FdR-groupW.git
 ```
 
 <br>
+
 If you want to read the **Doxygen Documentation** for the code, move into the /docs folder:
+
 <br>
 
 ```
