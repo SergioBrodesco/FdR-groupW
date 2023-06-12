@@ -24,16 +24,9 @@ git clone https://github.com/SergioBrodesco/FdR-groupW.git
 
 <br>
 
-If you want to read the **Doxygen Documentation** for the code, move into the /docs folder:
-
-<br>
-
-```
-cd FdR-groupW/docs
-```
-
-Here you can find 2 folders:
-an html folder that contains the static html pages, and a latex folder that contains the code to generate a pdf.
+If you want to read the **Doxygen Documentation** for the code, you can find it in the docs folder.<br>
+Here you can find 2 types of documentation:
+an html folder that contains the static html pages, and a latex folder that contains pdf file.
 
 <br>
 
@@ -42,7 +35,7 @@ If you want to view the html page, you need to open the index.html file inside t
 <br>
 
 ```
-cd html
+cd FdR-groupW/docs/html
 xdg-open index.html
 ```
 
@@ -53,7 +46,7 @@ If you want to view the pdf, you need to open the refman.pdf file inside the lat
 <br>
 
 ```
-cd latex
+cd FdR-groupW/docs/latex
 xdg-open refman.pdf
 ```
 
