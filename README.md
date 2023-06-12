@@ -135,12 +135,12 @@ That's it! You should see the simulation running!
 # Credits
 
 * Luca Cazzola - Università degli studi di Trento (Unitn), Trento – Italy
-  luca.cazzola-1@studenti.unitn.it
+  <br> luca.cazzola-1@studenti.unitn.it
 
 * Dennis Cattoni - Università degli studi di Trento (Unitn), Trento – Italy
-  dennis.cattoni@studenti.unitn.it
+  <br> dennis.cattoni@studenti.unitn.it
 
 * Sergio Brodesco - Università degli studi di Trento (Unitn), Trento – Italy
-  sergio.brodesco@studenti.unitn.it
+  <br> sergio.brodesco@studenti.unitn.it
 
 
