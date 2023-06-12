@@ -99,7 +99,9 @@ everything should be set properly
 First you need to change the world file with one of your choise... we suggest as first test the "my_world.world" file, to do that edit /ur5_generic.py in the following line, and specify '<your_world_name.world>' instead
 
 <br>
+
 https://github.com/mfocchi/robot_control/blob/25569e7ad103d58ae0b6095f7ccd570975b36218/lab_exercises/lab_palopoli/ur5_generic.py#L75
+
 <br>
 
 To run the simulation first open a new terminal and run the /ur5_generic.py script, this will initialize all the basic nodes and the Gazebo enviroment
