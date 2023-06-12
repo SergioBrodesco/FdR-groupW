@@ -1,4 +1,0 @@
-<map id="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/lab_group_w/include/task_planner.h" name="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/lab_group_w/include/task_planner.h">
-<area shape="rect" id="node1" title="Header with the declaration of the functions implemented in task_planner.cpp." alt="" coords="5,5,196,76"/>
-<area shape="rect" id="node2" href="$task__planner_8cpp.html" title="Implementation of the ROS node task_planner, that we use to send destinations to the motion node." alt="" coords="5,124,196,195"/>
-</map>
