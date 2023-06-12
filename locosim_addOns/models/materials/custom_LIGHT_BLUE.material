@@ -1,0 +1,14 @@
+material Custom/Light_Blue
+{
+  technique
+  {
+    pass
+    {
+      ambient 0.175 0.413 0.694 1.0
+      diffuse 0.175 0.413 0.694 1.0
+      specular 0.1 0.1 0.1 1.0
+      emissive 0.0 0.0 0.0 1.0
+      shininess 20.0
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+
+	<model name="X1-Y4-Z2">
+		<static>false</static>
+		<link name="link">
+			<collision name="collision">
+				<geometry>
+					<mesh>
+						<uri>model://X1-Y4-Z2/meshes/X1-Y4-Z2.stl</uri>
+						<scale>1 1 1</scale>
+					</mesh>	   
+				</geometry>
+			</collision>
+					
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>model://X1-Y4-Z2/meshes/X1-Y4-Z2.stl</uri>
+						<scale>1 1 1</scale>
+					</mesh>
+				</geometry>
+
+				<material>
+          <script>
+						<uri>model://materials/custom_RED.material</uri>
+						<name>Custom/Red</name>
+					</script>
+        </material>
+
+			</visual>
+		</link>
+	</model>
+</sdf>
+
