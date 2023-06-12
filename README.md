@@ -18,7 +18,11 @@ static html pages in **FdR-groupW/docs**, and a pdf file in **FdR-groupW/docs/la
 
 <br>
 
-To view the html page, you need to open the **index.html** file inside the html folder:
+You can view the pdf [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/docs/latex/refman.pdf).
+
+<br>
+
+Alternatively, to view the html page, you need to open the **index.html** file inside the html folder:
 
 <br>
 
@@ -26,10 +30,6 @@ To view the html page, you need to open the **index.html** file inside the html 
 cd ~/ros_ws/src/locosim/robot_control/lab_exercises/FdR-groupW/docs/html
 xdg-open index.html
 ```
-
-<br>
-
-Alternatively, you can view the pdf [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/docs/latex/refman.pdf).
 
 <br>
 
