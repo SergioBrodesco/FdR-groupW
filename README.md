@@ -32,7 +32,25 @@ If you want to read the **Doxygen Documentation** for the code, move into the /d
 cd docs
 ```
 
-Here you can find the html static page and the Latex code with the entire project documentation in their respective folders.
+Here you can find 2 folders:
+an html folder that contains the static html pages, and a latex folder that contains the code to generate a pdf.
+
+<br>
+If you want to view the html page, you need to open the index.html file inside the html folder:
+
+<br>
+
+```
+cd html
+xdg-open index.html
+```
+
+If you want to view the pdf, you need to open the refman.pdf file inside the latex folder:
+
+```
+cd latex
+xdg-open refman.pdf
+```
 
 <br>
 
