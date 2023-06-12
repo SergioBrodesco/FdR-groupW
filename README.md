@@ -92,7 +92,7 @@ if you have a local set of weigths you can copy it in the /scripts folder as wel
 
 <br>
 
-some code lines of /scripts/image_processr.py containing absolute paths to your yolov5 model, mesh files and weights needs to be modified in order to work properly...
+some code lines of /scripts/image_processr.py containing absolute paths to your yolov5 model, mesh files and weights need to be modified in order to work properly...
 
 copy the absolute path to your model here:
 https://github.com/SergioBrodesco/FdR-groupW/blob/849b3415a4917d88b1c121c6b76795be60176be6/scripts/image_processor.py#L534
