@@ -37,6 +37,7 @@ catkin_make install
 source ~/.bashrc
 ```
 <br>
+
 ## Yolov5 model
 <br>
 What we still miss is a local model of Yolov5 and a set of trained weights...
