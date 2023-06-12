@@ -1,8 +1,8 @@
-# Fondamenti di Rbotica - Gruppo W
+# Fondamenti di Robotica - Gruppo W
 
 This repository contains all the sources created by the group W during the course "Fondamenti di Robotica", that took place during the accademic year 2022/2023 in University of Trento.
 
-Open **Project-1_Robot-Robotic_Manipulator.pdf** to have more details about the project.
+Open [**Project-1_Robot-Robotic_Manipulator.pdf**](https://github.com/SergioBrodesco/FdR-groupW/blob/master/Project-1_Robot-Robotic_Manipulator.pdf) to have more details about the project.
 <br><br>
 
 # How to use
