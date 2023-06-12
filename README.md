@@ -1,8 +1,9 @@
-# FdR-groupW
+# Fondamenti di Rbotica - Gruppo W
 
 This repository contains all the sources created by the group W during the course "Fondamenti di Robotica", that took place during the accademic year 2022/2023 in Trento.
 
 Open "Project-1_Robot-Robotic_Manipulator" to have more details about the project.
+
 
 # How to use
 
@@ -28,4 +29,51 @@ copy also the custom world files
 cd ../worlds
 cp * ~/ros_ws/src/locosim/ros_impedance_controller/worlds
 ```
+
+compile and update the packages list
+```
+cd ~/ros_ws
+catkin_make install
+source ~/.bashrc
+```
+
+## Yolov5 model
+
+Now everything should be correctly setup, what we still miss is a local model of Yolov5 and a set of trained weights...
+
+To download the yolov5 model you just need to follow the [Ultralytics](https://github.com/ultralytics/yolov5) guidelines
+
+```
+cd ~/ros_ws/src/locosim/robot_control/lab_exercises/FdR-groupW/scripts
+git clone https://github.com/ultralytics/yolov5  # clone
+cd yolov5
+pip install -r requirements.txt  # install
+```
+
+if you have a local set of weigths you can copy it in the /scripts folder as well
+
+### modify image_processor.py
+
+some code lines of /scripts/image_processr.py containing absolute paths to your yolov5 model, mesh files and weights needs to be modified in order to work properly...
+
+copy the absolute path to your model here:
+https://github.com/SergioBrodesco/FdR-groupW/blob/849b3415a4917d88b1c121c6b76795be60176be6/scripts/image_processor.py#L534
+
+copy the absolute path to your weights here:
+https://github.com/SergioBrodesco/FdR-groupW/blob/849b3415a4917d88b1c121c6b76795be60176be6/scripts/image_processor.py#L535
+
+and finally the absolute path to the 3D mesh that you've already downloaded with the repo (located in /scripts/models)
+https://github.com/SergioBrodesco/FdR-groupW/blob/849b3415a4917d88b1c121c6b76795be60176be6/scripts/image_processor.py#LL540C13-L540C13
+
+
+now recompile
+```
+cd ~/ros_ws
+catkin_make install
+```
+
+everything should be set properly
+
+# Testing
+
 
