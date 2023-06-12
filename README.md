@@ -119,6 +119,8 @@ rosrun lab_group_w task_planner
 rosrun lab_group_w image_processor
 ```
 
+<br>
+
 That's it! You should see the simulation running!
 
 <br>
