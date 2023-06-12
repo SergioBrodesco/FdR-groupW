@@ -1,0 +1,10 @@
+<map id="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/FdR&#45;groupW/include/ur5Jac.h" name="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/FdR&#45;groupW/include/ur5Jac.h">
+<area shape="rect" id="node1" title="Header with the declaration of the function we use to compute the jacobian." alt="" coords="382,5,581,76"/>
+<area shape="rect" id="node2" href="$invDiffKinematicControlSimCompleteAngleAxis_8h.html" title="Header file containing the declaration of the functions we use to compute the Differential kinematic." alt="" coords="227,124,485,209"/>
+<area shape="rect" id="node8" href="$ur5Jac_8cpp.html" title="implementation of the Jacobian for the ur5" alt="" coords="509,131,707,202"/>
+<area shape="rect" id="node3" href="$trajectory__planner_8h.html" title="Header with the declaration of the functions implemented in trajectory_planner.cpp." alt="" coords="117,265,325,335"/>
+<area shape="rect" id="node7" href="$invDiffKinematicControlSimCompleteAngleAxis_8cpp.html" title="Implementation of the functions we use to compute the Differential kinematic." alt="" coords="349,257,632,343"/>
+<area shape="rect" id="node4" href="$motion__processor_8h.html" title="Header of the motion_processor.cpp file." alt="" coords="5,391,211,461"/>
+<area shape="rect" id="node6" href="$trajectory__planner_8cpp.html" title="Implementation of the functions we use to compute a trajectory for the robot arm." alt="" coords="235,391,434,461"/>
+<area shape="rect" id="node5" href="$motion__processor_8cpp.html" title="Implementation of the ROS node motion_processor, that we use to compute and send trajectories to the ..." alt="" coords="9,509,207,580"/>
+</map>
