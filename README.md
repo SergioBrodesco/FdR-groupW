@@ -35,7 +35,9 @@ cd docs
 Here you can find the html static page and the Latex code with the entire project documentation in their respective folders.
 
 <br>
+
 Some files need to be included in the Locosim environment, so first go in the locosim_addOns folder and copy all the mesh and custom material files
+
 <br>
 
 ```
@@ -43,7 +45,9 @@ cd locosim_addOns/models
 cp * ~/ros_ws/src/locosim/ros_impedance_controller/worlds/models
 ```
 <br>
+
 copy also the custom world files
+
 <br>
 
 ```
@@ -52,7 +56,9 @@ cp * ~/ros_ws/src/locosim/ros_impedance_controller/worlds
 ```
 
 <br>
+
 compile and update the packages list
+
 <br>
 
 ```
@@ -118,25 +124,33 @@ First you need to change the world file with one of your choice... we suggest to
 https://github.com/mfocchi/robot_control/blob/25569e7ad103d58ae0b6095f7ccd570975b36218/lab_exercises/lab_palopoli/ur5_generic.py#L75
 
 <br>
+
 If you want to use the simulated robot on gazebo, you need to set the real_robot flag as False at this line:
+
 <br>
 
 https://github.com/mfocchi/robot_control/blob/25569e7ad103d58ae0b6095f7ccd570975b36218/lab_exercises/lab_palopoli/params.py#LL42C44-L42C44
 
 <br>
+
 You can also change between the soft and rigid gripper by modifiyng the soft_gripper flag:
+
 <br>
 
 https://github.com/mfocchi/robot_control/blob/25569e7ad103d58ae0b6095f7ccd570975b36218/lab_exercises/lab_palopoli/params.py#LL45C9-L45C9
 
 <br>
+
 Note that in order to use the gripper in simulation you also need to set gripper_sim as True at this line:
+
 <br>
 
 https://github.com/mfocchi/robot_control/blob/25569e7ad103d58ae0b6095f7ccd570975b36218/lab_exercises/lab_palopoli/params.py#LL44C15-L44C15
 
 <br>
+
 To run the simulation first open a new terminal and run the /ur5_generic.py script, this will initialize all the basic nodes and the Gazebo enviroment
+
 <br>
 
 ```
@@ -145,10 +159,13 @@ python3 -i ur5_generic.py
 ```
 
 <br>
+
 Otherwise you can run the ur5_generic.py script using the pycharm IDE if you have it installed and working for locosim.
 
-<br>
+<br><br>
+
 After the Homing procedure of the robotic arm is accomplished run our 3 custom nodes, **each in a separate terminal**
+
 <br>
 
 ```
