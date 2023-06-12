@@ -29,7 +29,7 @@ xdg-open index.html
 
 <br>
 
-Alternatively, you can view the pdf [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/docs/latex/refman.pdf)
+Alternatively, you can view the pdf [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/docs/latex/refman.pdf).
 
 <br>
 
