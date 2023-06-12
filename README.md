@@ -176,7 +176,7 @@ python3 -i ur5_generic.py
 
 <br>
 
-Otherwise you can run the ur5_generic.py script using the pycharm IDE if you have it installed and working for locosim.
+Otherwise you can also run the ur5_generic.py script using the [pycharm IDE](https://github.com/mfocchi/locosim#running-the-software-from-python-ide-pycharm) if you have it installed and working for locosim.
 
 <br><br>
 
