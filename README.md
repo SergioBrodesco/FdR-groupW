@@ -29,13 +29,16 @@ copy also the custom world files
 cd ../worlds
 cp * ~/ros_ws/src/locosim/ros_impedance_controller/worlds
 ```
+
 <br>
 compile and update the packages list
+
 ```
 cd ~/ros_ws
 catkin_make install
 source ~/.bashrc
 ```
+
 <br>
 
 ## Yolov5 model
