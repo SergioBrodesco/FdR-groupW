@@ -29,7 +29,7 @@ If you want to read the **Doxygen Documentation**, move into the /docs folder:
 <br>
 
 ```
-<cloned_project_folder>/docs/
+~ <cloned_project_folder>/docs/
 ```
 
 <br>
