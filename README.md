@@ -107,7 +107,7 @@ python3 ur5_generic.py
 ```
 <br>
 
-After the Homing procedure of the robotic arm is accomplished run our 3 custom nodes, *each in a separate terminal*
+After the Homing procedure of the robotic arm is accomplished run our 3 custom nodes, **each in a separate terminal**
 
 ```
 rosrun lab_group_w motion_processor
