@@ -24,7 +24,7 @@ git clone https://github.com/SergioBrodesco/FdR-groupW.git
 
 <br>
 
-If you want to read the **Doxygen Documentation** for the code, you can find it in the docs folder.<br>
+If you want to read the **Doxygen Documentation** for the code, you can find it in the docs folder.
 Here you can find 2 types of documentation:
 an html folder that contains the static html pages, and a latex folder that contains pdf file.
 
