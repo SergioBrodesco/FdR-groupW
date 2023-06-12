@@ -22,7 +22,7 @@ To view the html page, you need to open the **index.html** file inside the **FdR
 <br>
 
 ```
-cd ~/ros_ws/src/locosim/robot_control/lab_exercises/FdR-groupW/docs/html
+cd LOCOSIM_DIR/robot_control/lab_exercises/FdR-groupW/docs/html
 xdg-open index.html
 ```
 
@@ -38,10 +38,11 @@ The repo consist of a ROS 1 package that needs to be integrated with the Locosim
 
 <br>
 
-**NOTE:** We assume the ros_ws folder is located in your home folder
+**NOTE:** You should change LOCOSIM_DIR with the path to your locosim directory.
+We also assume that your /ros_ws folder is located in your home folder.
 
 ```
-cd ~/ros_ws/src/locosim/robot_control/lab_exercises
+cd LOCOSIM_DIR/robot_control/lab_exercises
 git clone https://github.com/SergioBrodesco/FdR-groupW.git
 ```
 
@@ -53,7 +54,7 @@ Some files need to be included in the Locosim environment, so first go in the lo
 
 ```
 cd locosim_addOns/models
-cp -r * ~/ros_ws/src/locosim/ros_impedance_controller/worlds/models
+cp -r * LOCOSIM_DIR/ros_impedance_controller/worlds/models
 ```
 <br>
 
@@ -63,7 +64,7 @@ copy also the custom world files
 
 ```
 cd ../worlds
-cp * ~/ros_ws/src/locosim/ros_impedance_controller/worlds
+cp * LOCOSIM_DIR/ros_impedance_controller/worlds
 ```
 
 <br>
@@ -87,7 +88,7 @@ What we still miss is a local model of Yolov5 and a set of trained weights...
 To download the yolov5 model you just need to follow the [Ultralytics](https://github.com/ultralytics/yolov5) guidelines
 
 ```
-cd ~/ros_ws/src/locosim/robot_control/lab_exercises/FdR-groupW/scripts
+cd LOCOSIM_DIR/robot_control/lab_exercises/FdR-groupW/scripts
 git clone https://github.com/ultralytics/yolov5  # clone
 cd yolov5
 pip install -r requirements.txt  # install
@@ -165,7 +166,7 @@ To run the simulation first open a new terminal and run the /ur5_generic.py scri
 <br>
 
 ```
-cd ~/ros_ws/src/locosim/robot_control/lab_exercises/lab_palopoli
+cd LOCOSIM_DIR/robot_control/lab_exercises/lab_palopoli
 python3 -i ur5_generic.py
 ```
 
