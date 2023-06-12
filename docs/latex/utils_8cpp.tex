@@ -1,0 +1,107 @@
+\hypertarget{utils_8cpp}{}\doxysection{/home/sergio/ros\+\_\+ws/src/locosim/robot\+\_\+control/lab\+\_\+exercises/\+Fd\+R-\/group\+W/src/utils.cpp File Reference}
+\label{utils_8cpp}\index{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/FdR-\/groupW/src/utils.cpp@{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/FdR-\/groupW/src/utils.cpp}}
+
+
+Implementation of commonly used functions.  
+
+
+{\ttfamily \#include \char`\"{}../include/utils.\+h\char`\"{}}\newline
+Include dependency graph for utils.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3d \mbox{\hyperlink{utils_8cpp_ab6922bde1b0c2b2c812f40ca5f5a418d}{W\+\_\+t\+\_\+\+R\+\_\+transform}} (const Vector3d \&pos)
+\begin{DoxyCompactList}\small\item\em Function that transforms a point from World frame to Robot frame. \end{DoxyCompactList}\item 
+Vector3d \mbox{\hyperlink{utils_8cpp_abf5af8c8928b287a341a50a70a0b6027}{R\+\_\+t\+\_\+\+W\+\_\+transform}} (const Vector3d \&pos)
+\begin{DoxyCompactList}\small\item\em Function that transforms a point from Robot frame to World frame. \end{DoxyCompactList}\item 
+Matrix3d \mbox{\hyperlink{utils_8cpp_a358cf011e022ddba9694b74e07f37fbe}{eul2rotm\+F\+DR}} (const Vector3d \&eul\+X\+YZ)
+\begin{DoxyCompactList}\small\item\em Function that translates from Euler angles to rotation matrix. \end{DoxyCompactList}\item 
+Vector3d \mbox{\hyperlink{utils_8cpp_a1da175139ad6bfbfdaab1ef7f7fb891d}{rotm2eul\+F\+DR}} (const Matrix3d \&R)
+\begin{DoxyCompactList}\small\item\em Function that translates from rotation matrix to Euler angles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of commonly used functions. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8cpp_a358cf011e022ddba9694b74e07f37fbe}\label{utils_8cpp_a358cf011e022ddba9694b74e07f37fbe}} 
+\index{utils.cpp@{utils.cpp}!eul2rotmFDR@{eul2rotmFDR}}
+\index{eul2rotmFDR@{eul2rotmFDR}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{eul2rotmFDR()}{eul2rotmFDR()}}
+{\footnotesize\ttfamily Matrix3d eul2rotm\+F\+DR (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{eul\+X\+YZ }\end{DoxyParamCaption})}
+
+
+
+Function that translates from Euler angles to rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eul\+X\+YZ} & Euler angles we want to transform (X\+YZ vector) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix3d containing the rotation matrix (Z\+YX matrix) obtained from the received Euler angles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8cpp_abf5af8c8928b287a341a50a70a0b6027}\label{utils_8cpp_abf5af8c8928b287a341a50a70a0b6027}} 
+\index{utils.cpp@{utils.cpp}!R\_t\_W\_transform@{R\_t\_W\_transform}}
+\index{R\_t\_W\_transform@{R\_t\_W\_transform}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{R\_t\_W\_transform()}{R\_t\_W\_transform()}}
+{\footnotesize\ttfamily Vector3d R\+\_\+t\+\_\+\+W\+\_\+transform (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Function that transforms a point from Robot frame to World frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & point we want to transform \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector3d containing the point translated in the World frame 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8cpp_a1da175139ad6bfbfdaab1ef7f7fb891d}\label{utils_8cpp_a1da175139ad6bfbfdaab1ef7f7fb891d}} 
+\index{utils.cpp@{utils.cpp}!rotm2eulFDR@{rotm2eulFDR}}
+\index{rotm2eulFDR@{rotm2eulFDR}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{rotm2eulFDR()}{rotm2eulFDR()}}
+{\footnotesize\ttfamily Vector3d rotm2eul\+F\+DR (\begin{DoxyParamCaption}\item[{const Matrix3d \&}]{R }\end{DoxyParamCaption})}
+
+
+
+Function that translates from rotation matrix to Euler angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & rotation matrix we want to transform (Z\+YX matrix) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector3d containing the Euler angles (X\+YZ vector) obtained from the received rotation matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8cpp_ab6922bde1b0c2b2c812f40ca5f5a418d}\label{utils_8cpp_ab6922bde1b0c2b2c812f40ca5f5a418d}} 
+\index{utils.cpp@{utils.cpp}!W\_t\_R\_transform@{W\_t\_R\_transform}}
+\index{W\_t\_R\_transform@{W\_t\_R\_transform}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{W\_t\_R\_transform()}{W\_t\_R\_transform()}}
+{\footnotesize\ttfamily Vector3d W\+\_\+t\+\_\+\+R\+\_\+transform (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Function that transforms a point from World frame to Robot frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & point we want to transform \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector3d containing the point translated in the Robot frame 
+\end{DoxyReturn}
