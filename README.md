@@ -27,7 +27,6 @@ git clone https://github.com/SergioBrodesco/FdR-groupW.git
 If you want to read the **Doxygen Documentation**, move into the /docs folder:
 
 <br>
-<br>
 
 ```
 <cloned_project_folder>/docs/
@@ -37,6 +36,7 @@ If you want to read the **Doxygen Documentation**, move into the /docs folder:
 Here you can find the html static page and the Latex code with the entire project documentation in their respective folders.
 
 <br>
+
 <br>
 
 Some files need to be included in the Locosim environment, so first go in the locosim_addOns folder first copy all the mesh and custom material files
