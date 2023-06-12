@@ -7,8 +7,11 @@ Open "Project-1_Robot-Robotic_Manipulator" to have more details about the projec
 
 # How to use
 <br>
+
 The repo consist in a ROS 1 package that needs to be integrated with the Locosim repo, so first follow the instructions provided in the
 [Locosim repo](https://github.com/mfocchi/locosim) and then download our package in the /lab_exercise folder:
+
+<br>
 
 **NOTE:** We assume the ros_ws folder is located in your home folder
 
