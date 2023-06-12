@@ -130,6 +130,17 @@ rosrun lab_group_w image_processor
 That's it! You should see the simulation running!
 
 <br>
+<br>
 
+# Credits
+
+* Luca Cazzola - Università degli studi di Trento (Unitn), Trento – Italy
+  luca.cazzola-1@studenti.unitn.it
+
+* Dennis Cattoni - Università degli studi di Trento (Unitn), Trento – Italy
+  dennis.cattoni@studenti.unitn.it
+
+* Sergio Brodesco - Università degli studi di Trento (Unitn), Trento – Italy
+  sergio.brodesco@studenti.unitn.it
 
 
