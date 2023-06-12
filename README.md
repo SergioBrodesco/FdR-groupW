@@ -34,13 +34,17 @@ xdg-open index.html
 <br>
 
 The repo consist of a ROS 1 package that needs to be integrated with the Locosim repo, so first follow the instructions provided in the
-[Locosim repo](https://github.com/mfocchi/locosim) and then download our package in the /lab_exercise folder:
+[Locosim repo](https://github.com/mfocchi/locosim).
 
 <br>
 
 **NOTE:** You should change LOCOSIM_DIR with the path to your locosim directory.
 <br>
 We also assume that your /ros_ws folder is located in your home folder.
+
+<br>
+
+Then download our package in the /lab_exercise folder:
 
 <br>
 
