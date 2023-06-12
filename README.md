@@ -96,4 +96,25 @@ everything should be set properly
 
 # Testing
 
+To run the simulation first open a new terminal and run the /ur5_generic.py script, this will initialize all the basic nodes and the Gazebo enviroment
+```
+cd ~/ros_ws/src/locosim/robot_control/lab_exercises/lab_palopoli
+python3 ur5_generic.py
+```
+<br>
+
+After the Homing procedure of the robotic arm is accomplished run our 3 custom nodes, *each in a separate terminal*
+
+```
+rosrun lab_group_w motion_processor
+```
+```
+rosrun lab_group_w task_planner
+```
+```
+rosrun lab_group_w image_processor
+```
+
+That's it! You should see the simulation running!
+
 
