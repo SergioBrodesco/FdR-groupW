@@ -9,20 +9,13 @@ Open [**Project-1_Robot-Robotic_Manipulator.pdf**](https://github.com/SergioBrod
 
 <br>
 
-If you want to read the **Doxygen Documentation** for the code, you can find it in the **FdR-groupW/docs** folder after completing the setup explained [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/README.md#how-to-use).
+If you want to read the **Doxygen Documentation** for the code, check the generated PDF doc [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/docs/latex/refman.pdf).
 
 <br>
 
-Inside the folder you can find 2 types of documentation:
-static html pages in **FdR-groupW/docs**, and a pdf file in **FdR-groupW/docs/latex**.
-
+Alternatively, you can find the html version of the documentation after completing the setup explained [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/README.md#how-to-use).
 <br>
-
-You can view the pdf [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/docs/latex/refman.pdf).
-
-<br>
-
-Alternatively, to view the html page, you need to open the **index.html** file inside the html folder:
+To view the html page, you need to open the **index.html** file inside the **FdR-groupW/docs/html** folder
 
 <br>
 
