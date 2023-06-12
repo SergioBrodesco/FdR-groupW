@@ -42,7 +42,7 @@ Some files need to be included in the Locosim environment, so first go in the lo
 
 ```
 cd locosim_addOns/models
-cp * ~/ros_ws/src/locosim/ros_impedance_controller/worlds/models
+cp -r * ~/ros_ws/src/locosim/ros_impedance_controller/worlds/models
 ```
 <br>
 
