@@ -9,7 +9,7 @@ Open [**Project-1_Robot-Robotic_Manipulator.pdf**](https://github.com/SergioBrod
 
 <br>
 
-If you want to read the **Doxygen Documentation** for the code, you can find it in the **FdR-groupW/docs** folder after completing the setup explained [later](https://github.com/SergioBrodesco/FdR-groupW/blob/master/README.md#how-to-use).
+If you want to read the **Doxygen Documentation** for the code, you can find it in the **FdR-groupW/docs** folder after completing the setup explained [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/README.md#how-to-use).
 
 <br>
 
