@@ -42,6 +42,8 @@ The repo consist of a ROS 1 package that needs to be integrated with the Locosim
 <br>
 We also assume that your /ros_ws folder is located in your home folder.
 
+<br>
+
 ```
 cd LOCOSIM_DIR/robot_control/lab_exercises
 git clone https://github.com/SergioBrodesco/FdR-groupW.git
