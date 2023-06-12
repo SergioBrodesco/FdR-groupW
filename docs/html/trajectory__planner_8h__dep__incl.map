@@ -1,0 +1,6 @@
+<map id="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/FdR&#45;groupW/include/trajectory_planner.h" name="/home/sergio/ros_ws/src/locosim/robot_control/lab_exercises/FdR&#45;groupW/include/trajectory_planner.h">
+<area shape="rect" id="node1" title="Header with the declaration of the functions implemented in trajectory_planner.cpp." alt="" coords="117,5,325,76"/>
+<area shape="rect" id="node2" href="$motion__processor_8h.html" title="Header of the motion_processor.cpp file." alt="" coords="5,124,211,195"/>
+<area shape="rect" id="node4" href="$trajectory__planner_8cpp.html" title="Implementation of the functions we use to compute a trajectory for the robot arm." alt="" coords="235,124,434,195"/>
+<area shape="rect" id="node3" href="$motion__processor_8cpp.html" title="Implementation of the ROS node motion_processor, that we use to compute and send trajectories to the ..." alt="" coords="9,243,207,313"/>
+</map>
