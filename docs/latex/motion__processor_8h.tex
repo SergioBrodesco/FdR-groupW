@@ -1,0 +1,181 @@
+\hypertarget{motion__processor_8h}{}\doxysection{/home/sergio/ros\+\_\+ws/src/locosim/robot\+\_\+control/lab\+\_\+exercises/\+Fd\+R-\/group\+W/include/motion\+\_\+processor.h File Reference}
+\label{motion__processor_8h}\index{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/FdR-\/groupW/include/motion\_processor.h@{/home/sergio/ros\_ws/src/locosim/robot\_control/lab\_exercises/FdR-\/groupW/include/motion\_processor.h}}
+
+
+Header of the \mbox{\hyperlink{motion__processor_8cpp}{motion\+\_\+processor.\+cpp}} file.  
+
+
+{\ttfamily \#include \char`\"{}trajectory\+\_\+planner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pos\+\_\+manager.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ros/callback\+\_\+queue.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lab\+\_\+group\+\_\+w/\+Robot\+Instructions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lab\+\_\+group\+\_\+w/\+Image\+Data.\+h\char`\"{}}\newline
+Include dependency graph for motion\+\_\+processor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motion__processor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{motion__processor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{motion__processor_8h_a54385faa20232944bc0e8145858206cb}{recive\+\_\+jstate}} (const sensor\+\_\+msgs\+::\+Joint\+State \&joint\+State\+\_\+msg\+\_\+sim)
+\begin{DoxyCompactList}\small\item\em Callback function used for reading current joint\+States from the /ur5/joint\+\_\+states topic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_ab503cb0eb401bbf09902cc6c9e1f628f}\label{motion__processor_8h_ab503cb0eb401bbf09902cc6c9e1f628f}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{motion__processor_8h_ab503cb0eb401bbf09902cc6c9e1f628f}{q}} (6, 0.\+0)
+\begin{DoxyCompactList}\small\item\em vector where we save the joint values obtained in \mbox{\hyperlink{motion__processor_8h_a54385faa20232944bc0e8145858206cb}{recive\+\_\+jstate()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motion__processor_8h_aaf591b655d921bc117810edea2991812}{set\+\_\+positions}} (double p0, double p1, double p2)
+\begin{DoxyCompactList}\small\item\em Set the positions in the \char`\"{}\+Robot\+Instructions\char`\"{} message using the information we received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motion__processor_8h_ad0bbc65543990144b4987c3ae1bf0434}{set\+\_\+rotations}} (double r0\+\_\+0, double r0\+\_\+1, double r0\+\_\+2, double r1\+\_\+0, double r1\+\_\+1, double r1\+\_\+2, double r2\+\_\+0, double r2\+\_\+1, double r2\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Set the rotations in the \char`\"{}\+Robot\+Instructions\char`\"{} message using the information we received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motion__processor_8h_a2aad0cb6a7fb99c0dd9a80a0d5c42bf7}{callback\+\_\+instructions\+\_\+sub}} (const lab\+\_\+group\+\_\+w\+::\+Robot\+Instructions \&msg)
+\begin{DoxyCompactList}\small\item\em Callback function used for reading the next position information received on the /task\+\_\+planner/robot\+\_\+instructions custom topic. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{motion__processor_8h_a9685fa65b2b8b9743c94961e7ec59207}{get\+\_\+trajectory}} ()
+\begin{DoxyCompactList}\small\item\em Function used to obtain the trajectory we want to follow, based on the information received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{motion__processor_8h_a9e7923dd434ecb1c52b6789e40426c26}\label{motion__processor_8h_a9e7923dd434ecb1c52b6789e40426c26}} 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{motion__processor_8h_a9e7923dd434ecb1c52b6789e40426c26}{joint\+\_\+names}} = \{\char`\"{}shoulder\+\_\+pan\+\_\+joint\char`\"{}, \char`\"{}shoulder\+\_\+lift\+\_\+joint\char`\"{}, \char`\"{}elbow\+\_\+joint\char`\"{}, \char`\"{}wrist\+\_\+1\+\_\+joint\char`\"{}, \char`\"{}wrist\+\_\+2\+\_\+joint\char`\"{}, \char`\"{}wrist\+\_\+3\+\_\+joint\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em vector containing the joint names, used to read the joint values in the \mbox{\hyperlink{motion__processor_8h_a54385faa20232944bc0e8145858206cb}{recive\+\_\+jstate()}} callback function \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_a928b2c9cbd91fdcfeaa84e7d027cb66f}\label{motion__processor_8h_a928b2c9cbd91fdcfeaa84e7d027cb66f}} 
+ros\+::\+Subscriber \mbox{\hyperlink{motion__processor_8h_a928b2c9cbd91fdcfeaa84e7d027cb66f}{rec\+\_\+jstate}}
+\begin{DoxyCompactList}\small\item\em subscriber to the /ur5/joint\+\_\+states topic \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_a2242a375bebbd1a1d1cf02a80d2715a2}\label{motion__processor_8h_a2242a375bebbd1a1d1cf02a80d2715a2}} 
+double \mbox{\hyperlink{motion__processor_8h_a2242a375bebbd1a1d1cf02a80d2715a2}{diameter}}
+\begin{DoxyCompactList}\small\item\em diameter used for the gripper \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_aa830fb81f3ad4e9003668d33b2a55291}\label{motion__processor_8h_aa830fb81f3ad4e9003668d33b2a55291}} 
+const double \mbox{\hyperlink{motion__processor_8h_aa830fb81f3ad4e9003668d33b2a55291}{loop\+\_\+frequency}} = 1000.\+0
+\begin{DoxyCompactList}\small\item\em Frequency used to coordinate with other nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_a4d2852f394c94e7eaac02e3c5b393654}\label{motion__processor_8h_a4d2852f394c94e7eaac02e3c5b393654}} 
+const double \mbox{\hyperlink{motion__processor_8h_a4d2852f394c94e7eaac02e3c5b393654}{dt}} = 1/\mbox{\hyperlink{task__planner_8h_a8a8e081c036397fa8db4b70e78e56722}{loop\+\_\+frequency}}
+\begin{DoxyCompactList}\small\item\em variable used for synchronization (will be used in \mbox{\hyperlink{p2pMotionPlan_8cpp}{p2p\+Motion\+Plan.\+cpp}}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_a72693b502523b2b424f794b415e20b75}\label{motion__processor_8h_a72693b502523b2b424f794b415e20b75}} 
+ros\+::\+Subscriber \mbox{\hyperlink{motion__processor_8h_a72693b502523b2b424f794b415e20b75}{sub\+\_\+instructions}}
+\begin{DoxyCompactList}\small\item\em subscriber to the /task\+\_\+planner/robot\+\_\+instructions topic \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_a865bff31512383544c3466279fc04429}\label{motion__processor_8h_a865bff31512383544c3466279fc04429}} 
+lab\+\_\+group\+\_\+w\+::\+Robot\+Instructions \mbox{\hyperlink{motion__processor_8h_a865bff31512383544c3466279fc04429}{instructions}}
+\begin{DoxyCompactList}\small\item\em message that the we receive from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_ae90ac35cc109e11474c2fbef687e94ec}\label{motion__processor_8h_ae90ac35cc109e11474c2fbef687e94ec}} 
+ros\+::\+Callback\+Queue \mbox{\hyperlink{motion__processor_8h_ae90ac35cc109e11474c2fbef687e94ec}{instructions\+\_\+\+Callback\+Queue}}
+\begin{DoxyCompactList}\small\item\em Callback\+Queue used to coordinate when reading Robot\+Instructions from the /task\+\_\+planner/robot\+\_\+instructions topic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_a08d1a1107cf27ffa7b785768bf5846bb}\label{motion__processor_8h_a08d1a1107cf27ffa7b785768bf5846bb}} 
+ros\+::\+Callback\+Queue \mbox{\hyperlink{motion__processor_8h_a08d1a1107cf27ffa7b785768bf5846bb}{jstates\+\_\+\+Callback\+Queue}}
+\begin{DoxyCompactList}\small\item\em Callback\+Queue used to coordinate when reading jstates from the /ur5/joint\+\_\+states topic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_ae75b00c49282799c8c12affe45cdb2fe}\label{motion__processor_8h_ae75b00c49282799c8c12affe45cdb2fe}} 
+ros\+::\+Service\+Client \mbox{\hyperlink{motion__processor_8h_ae75b00c49282799c8c12affe45cdb2fe}{gripper\+\_\+client}}
+\begin{DoxyCompactList}\small\item\em Set service client for move\+\_\+gripper service. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{motion__processor_8h_aa774de52553705344f649a3a230faf6a}\label{motion__processor_8h_aa774de52553705344f649a3a230faf6a}} 
+ros\+\_\+impedance\+\_\+controller\+::generic\+\_\+float \mbox{\hyperlink{motion__processor_8h_aa774de52553705344f649a3a230faf6a}{srv}}
+\begin{DoxyCompactList}\small\item\em message used for the move\+\_\+gripper service (containing the diameter for the gripper) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header of the \mbox{\hyperlink{motion__processor_8cpp}{motion\+\_\+processor.\+cpp}} file. 
+
+Motion planner is the R\+OS node we use to move the robot from a starting position to a desired one (received from \mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{motion__processor_8h_a2aad0cb6a7fb99c0dd9a80a0d5c42bf7}\label{motion__processor_8h_a2aad0cb6a7fb99c0dd9a80a0d5c42bf7}} 
+\index{motion\_processor.h@{motion\_processor.h}!callback\_instructions\_sub@{callback\_instructions\_sub}}
+\index{callback\_instructions\_sub@{callback\_instructions\_sub}!motion\_processor.h@{motion\_processor.h}}
+\doxysubsubsection{\texorpdfstring{callback\_instructions\_sub()}{callback\_instructions\_sub()}}
+{\footnotesize\ttfamily void callback\+\_\+instructions\+\_\+sub (\begin{DoxyParamCaption}\item[{const lab\+\_\+group\+\_\+w\+::\+Robot\+Instructions \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Callback function used for reading the next position information received on the /task\+\_\+planner/robot\+\_\+instructions custom topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Robot\+Instructions message received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{motion__processor_8h_a9685fa65b2b8b9743c94961e7ec59207}\label{motion__processor_8h_a9685fa65b2b8b9743c94961e7ec59207}} 
+\index{motion\_processor.h@{motion\_processor.h}!get\_trajectory@{get\_trajectory}}
+\index{get\_trajectory@{get\_trajectory}!motion\_processor.h@{motion\_processor.h}}
+\doxysubsubsection{\texorpdfstring{get\_trajectory()}{get\_trajectory()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd get\+\_\+trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function used to obtain the trajectory we want to follow, based on the information received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) 
+
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Matrix\+Xd matrix containing the trajectory we\textquotesingle{}ll send to the robot 
+\end{DoxyReturn}
+\mbox{\Hypertarget{motion__processor_8h_a54385faa20232944bc0e8145858206cb}\label{motion__processor_8h_a54385faa20232944bc0e8145858206cb}} 
+\index{motion\_processor.h@{motion\_processor.h}!recive\_jstate@{recive\_jstate}}
+\index{recive\_jstate@{recive\_jstate}!motion\_processor.h@{motion\_processor.h}}
+\doxysubsubsection{\texorpdfstring{recive\_jstate()}{recive\_jstate()}}
+{\footnotesize\ttfamily void recive\+\_\+jstate (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Joint\+State \&}]{joint\+State\+\_\+msg\+\_\+sim }\end{DoxyParamCaption})}
+
+
+
+Callback function used for reading current joint\+States from the /ur5/joint\+\_\+states topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+State\+\_\+msg\+\_\+sim} & message obtained from the topic \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{motion__processor_8h_aaf591b655d921bc117810edea2991812}\label{motion__processor_8h_aaf591b655d921bc117810edea2991812}} 
+\index{motion\_processor.h@{motion\_processor.h}!set\_positions@{set\_positions}}
+\index{set\_positions@{set\_positions}!motion\_processor.h@{motion\_processor.h}}
+\doxysubsubsection{\texorpdfstring{set\_positions()}{set\_positions()}}
+{\footnotesize\ttfamily void set\+\_\+positions (\begin{DoxyParamCaption}\item[{double}]{p0,  }\item[{double}]{p1,  }\item[{double}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Set the positions in the \char`\"{}\+Robot\+Instructions\char`\"{} message using the information we received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p0} & X \\
+\hline
+{\em p1} & Y \\
+\hline
+{\em p2} & Z \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{motion__processor_8h_ad0bbc65543990144b4987c3ae1bf0434}\label{motion__processor_8h_ad0bbc65543990144b4987c3ae1bf0434}} 
+\index{motion\_processor.h@{motion\_processor.h}!set\_rotations@{set\_rotations}}
+\index{set\_rotations@{set\_rotations}!motion\_processor.h@{motion\_processor.h}}
+\doxysubsubsection{\texorpdfstring{set\_rotations()}{set\_rotations()}}
+{\footnotesize\ttfamily void set\+\_\+rotations (\begin{DoxyParamCaption}\item[{double}]{r0\+\_\+0,  }\item[{double}]{r0\+\_\+1,  }\item[{double}]{r0\+\_\+2,  }\item[{double}]{r1\+\_\+0,  }\item[{double}]{r1\+\_\+1,  }\item[{double}]{r1\+\_\+2,  }\item[{double}]{r2\+\_\+0,  }\item[{double}]{r2\+\_\+1,  }\item[{double}]{r2\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Set the rotations in the \char`\"{}\+Robot\+Instructions\char`\"{} message using the information we received from the task planner node (\mbox{\hyperlink{task__planner_8cpp}{task\+\_\+planner.\+cpp}}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r0\+\_\+0} & \\
+\hline
+{\em r0\+\_\+1} & \\
+\hline
+{\em r0\+\_\+2} & \\
+\hline
+{\em r1\+\_\+0} & \\
+\hline
+{\em r1\+\_\+1} & \\
+\hline
+{\em r1\+\_\+2} & \\
+\hline
+{\em r2\+\_\+0} & \\
+\hline
+{\em r2\+\_\+1} & \\
+\hline
+{\em r2\+\_\+2} & \\
+\hline
+\end{DoxyParams}
