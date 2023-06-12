@@ -10,6 +10,7 @@ The repo consist in a ROS 1 package that needs to be integrated with the Locosim
 
 '''
 cd ros_ws/src/locosim/robot_control/lab_exercises
+'''
+'''
 git clone https://github.com/SergioBrodesco/FdR-groupW.git
 '''
-
